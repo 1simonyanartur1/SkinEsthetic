@@ -1,0 +1,90 @@
+body {
+	position: relative;
+	font: 300 14px/1 $main-font;
+	background: $body;
+	color: $dark;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+
+a {
+	transition: .3s;
+}
+
+.main {
+	overflow: hidden;
+}
+
+.container {
+	max-width: $container-pc;
+	width: 100%;
+	margin: 0 auto;
+	
+	@include max-screen(1620px) {
+		max-width: $container-mb;
+	}
+	@include max-screen(1200px) {
+		padding: 0 15px;
+	}
+}
+
+.copyright {
+	font-weight: 200;
+	@include fz(19, 14);
+	line-height: 1.6;
+	
+	@include max-screen($pc-medium) {
+		@include fz(15, 14);
+	}
+	@include max-screen($tablet-large) {
+		text-align: center;
+	}
+
+	a {
+		color: $dark;
+		text-decoration: none;
+		border-bottom: 1px solid $dark;
+	}
+}
+
+.social {
+	display: flex;
+	align-items: center;
+
+	@include max-screen($tablet-large) {
+		margin-left: auto;
+		margin-right: 10px;
+	}
+
+	&-item {
+		@include value('margin-left', 24, 12);
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 10px;
+		background: $white;
+
+		@include max-screen($mobile-large) {
+			width: 35px;
+			height: 35px;
+			border-radius: 5px;
+		}
+		@media (any-hover) {
+			&:hover {
+				background: rgba(0, 30, 68, 0.1);
+			}
+
+			&:active {
+				background: transparent;
+			}
+		}
+	}
+}

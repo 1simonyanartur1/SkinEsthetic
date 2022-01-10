@@ -1,0 +1,58 @@
+.footer {
+	@include value('padding-top', 60, 20);
+	@include value('padding-bottom', 60, 20);
+	
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		@include max-screen($tablet-large) {
+			justify-content: center;
+		}
+	}
+	
+	.links {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		@include max-screen($tablet-large) {
+			order: -1;
+			width: 100%;
+			justify-content: center;
+			margin-bottom: 15px;
+		}
+
+		&-item {
+			@include value('margin-left', 50, 10);
+			
+			@include max-screen($pc-medium) {
+				@include value('margin-left', 30, 10);
+			}
+			@include max-screen($tablet-large) {
+				margin: 10px;
+			}
+		}
+		&__link {
+			text-transform: uppercase;
+			@include fz(19, 14);
+			color: $dark;
+			text-decoration: none;
+			
+			@include max-screen($pc-medium) {
+				@include fz(15, 14);
+			}
+
+			@media (any-hover) {
+				&:hover {
+					color: $green;
+				}
+				&:active {
+					color: $blue_dark;
+				}
+			}
+		}
+	}
+}
