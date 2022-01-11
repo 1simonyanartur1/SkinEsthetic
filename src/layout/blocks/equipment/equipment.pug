@@ -1,0 +1,30 @@
+mixin equipment
+	section.equipment
+		.container
+			.row
+				.caption
+					h2.caption__title Используем
+				.caption.caption_white
+					h2.caption__title только современное оборудование 
+		.slider-wrap
+			.slider
+				.slide
+					img.slide__img(src=img+"equipment/img1.jpg", alt="")
+					h3.slide__title Название оборудования
+				.slide
+					img.slide__img(src=img+"equipment/img2.jpg", alt="")
+					h3.slide__title Название оборудования
+				.slide
+					img.slide__img(src=img+"equipment/img3.jpg", alt="")
+					h3.slide__title Название оборудования
+				.slide
+					img.slide__img(src=img+"equipment/img4.jpg", alt="")
+					h3.slide__title Название оборудования
+		.container
+			.controls
+				.pagination
+				.arrows
+					.arrow.arrow_prev
+						+arrow-icon
+					.arrow.arrow_next
+						+arrow-icon

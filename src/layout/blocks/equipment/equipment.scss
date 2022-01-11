@@ -1,0 +1,28 @@
+.equipment {
+	@include value('padding-top', 80, 20);
+	@include value('padding-bottom', 60, 20);
+	
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		@include value('padding-top', 135, 40);
+	}
+
+	.caption {
+		width: 30%;
+
+		&_white {
+			width: 70%;
+			color: $white2;
+		}
+	}
+
+	.slide {
+		&__img {
+
+		}
+		&__title {
+			
+		}
+	}
+}
