@@ -4,8 +4,29 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	@include value('padding-top', 45, 5);
-	@include value('padding-bottom', 45, 5);
+	@include value('padding-top', 45, 10);
+	@include value('padding-bottom', 45, 10);
+	transition: .3s;
+	
+	&.scroll {
+		padding: 10px 0;
+		background: $green-gray;
+		box-shadow: 0 0 55px 1px $green-gray;
+
+		.logo {
+			width: 140px;
+
+			@include max-screen($tablet-large) {
+				width: 100px;
+			}
+			@include max-screen($mobile-large) {
+				width: 80px;
+			}
+			@include max-screen-height($mobile-landscape-height) {
+				width: 80px;
+			}
+		}
+	}
 
 	&_desktop {
 		.wrapper_desktop {

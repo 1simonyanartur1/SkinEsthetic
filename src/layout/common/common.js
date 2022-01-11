@@ -9,3 +9,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
 window.addEventListener('resize', function (e) {
 	header();
 }, true);
+

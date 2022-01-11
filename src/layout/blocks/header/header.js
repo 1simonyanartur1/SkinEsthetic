@@ -11,4 +11,22 @@ export function header() {
 		header.classList.remove('header_mobile');
 		header.classList.add('header_desktop');
 	}
+
+	var lastScrollTop = 0;
+	document.addEventListener('scroll', () => {
+		var st = window.pageYOffset || document.documentElement.scrollTop;
+		if (st > lastScrollTop) {
+			// downscroll code
+			header.classList.add('scroll');
+		} else {
+			// upscroll code
+		}
+
+		if (st == 0) {
+			header.classList.remove('scroll');
+		}
+
+
+		lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+	}, false);
 }
