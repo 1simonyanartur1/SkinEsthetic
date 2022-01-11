@@ -98,3 +98,16 @@ a {
 		}
 	}
 }
+
+.caption {
+	&__title {
+		@include value('margin-bottom', 40, 20);
+		line-height: .8;
+		@include fz(68, 22);
+		font-family: $second-font;
+	}
+	&__text {
+		@include fz(19, 15);
+		line-height: 1.4;
+	}
+}
