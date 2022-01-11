@@ -1,0 +1,38 @@
+mixin mainscreen
+	section.mainscreen
+		.container
+			.inner
+				h1.mainscreen__title Аппаратная косметология
+				p.mainscreen__text Омоложение и оздоровление вашей кожи!
+				img.mainscreen__img(src=img+"mainscreen/img.png", srcset="" alt="")
+				.record
+					.record__text Для записи на прием оставьте свой номер телефона
+					form.record-form(action="#") 
+						fieldset.record-form-block
+							labbel.record-form__label
+								+user-card-icon
+							input.record-form__input(type="text" placeholder="+7 (___) ___  __ __")
+						fieldset.record-form-block
+							button.record-form__btn Записаться на прием
+						fieldset.record-form-block.record-form-block_large
+							p.record-form__info Согласен (-на) с <a href="privacy.html">политикой конфиденциальности</a> и даю свое согласие на обработку персональных данных
+				.cards
+					a.card(href="") 
+						.card__plus +
+						.card__title <b>21% Скидка</b> при <br> первом посещении
+						.card__text *Аппаратные процедуры для лица и тела
+					a.card(href="") 
+						.card__plus +
+						.card__title Приведи подругу — <br> <b>получи бонус</b>
+						.card__text *Поверхностный пилинг
+					a.card(href="") 
+						.card__plus +
+						.card__title <b>Получите дисконтную <br> карту</b> при — прохождении 2 процедур 
+						.card__text *Массаж лица
+					a.card(href="") 
+						.card__plus +
+						.card__title <b>21% Скидка</b> при первом посещении
+						.card__text *Чистка лица
+			p.mainscreen__label Новый уровень косметологии в Санкт-Петербурге
+
+

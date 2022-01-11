@@ -7,13 +7,18 @@ $img: '../img/';
 	* Цвета
 */
 $white: #fff;
+$white2: #FAFFFF;
 $body: #EEFBFB;
 $beige: #F5F5F5;
 $gray: #E6EFF0;
 $green: #00B5C8;
+$green_dark: #008F9E;
+$green_dark2: #346C88;
+$green-gray: #D8F5F5;
 $blue_light: #3C78C4;
 $blue_dark: #3166A8;
 $dark: #001E44;
+$gray-brown: #909090;
 
 /*
 	* Шрифты
@@ -40,7 +45,9 @@ $container-mb: 1200px;
 */
 $pc-medium: 1620px;
 $tablet-large: 1200px;
-$tablet-middle: 769px;
+$tablet-middle: 800px;
 $mobile-large: 599px;
 $mobile-medium: 400px;
 $mobile-small: 350px;
+
+$mobile-landscape-height: 630px;
