@@ -125,6 +125,10 @@ a {
 .caption {
 	@include value('margin-bottom', 40, 20);
 
+	&_white {
+		color: $white;
+	}
+
 	&_center {
 		text-align: center;
 	}

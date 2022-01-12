@@ -1,0 +1,18 @@
+.reviews {
+	@include value('padding-top', 90, 25);
+	@include value('padding-bottom', 90, 25);
+
+	.caption {
+		@include value('padding-left', 50, 10);
+		@include value('padding-right', 50, 10);
+	}
+	
+	.slide {
+		background: $white2;
+		@include value('padding-top', 40, 10);
+		@include value('padding-right', 30, 10);
+		@include value('padding-bottom', 40, 10);
+		@include value('padding-left', 30, 10);
+		border-radius: 10px;
+	}
+}
