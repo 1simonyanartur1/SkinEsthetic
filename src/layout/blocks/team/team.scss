@@ -1,0 +1,134 @@
+.team {
+
+	.section-label {
+		@include value('margin-bottom', 38, 14);
+	}
+
+	.container {
+		max-width: 1600px;
+	}
+
+	.inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		@include value('margin-bottom', 50, 20);
+	}
+
+	.slider-for-wrap {
+		width: 48%;
+		background: $dark;
+		border-radius: 10px;
+		@include value('padding', 30, 10);
+		margin: 0;
+
+		@include max-screen($tablet-middle) {
+			width: 100%;
+		}
+
+		.slide {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			line-height: 1.2;
+
+			&__img {
+				width: 49%;
+				height: 492px;
+				border-radius: 10px;
+				object-fit: cover;
+				object-position: top;
+
+				@include max-screen($pc-medium) {
+					height: 350px;
+				}
+				@include max-screen-height($mobile-landscape-height) {
+					height: 300px;
+				}
+			}
+
+			&-list {
+				width: 49%;
+				@include value('padding-top', 27, 10);
+				@include value('padding-bottom', 27, 10);
+
+				&-item {
+					@include value('margin-bottom', 25, 10);
+				}
+
+				&__title {
+					@include fz(17, 13);
+					color: #7E8FA5;
+					@include value('margin-bottom', 10, 5);
+				}
+
+				&__text {
+					@include fz(29, 16);
+					color: $white2;
+				}
+
+			}
+		}
+	}
+
+	.slider-nav-wrap {
+		width: 48%;
+		padding-left: 30px;
+		margin: 0;
+
+		@include max-screen($tablet-middle) {
+			display: none;
+		}
+
+		.slide {
+			position: relative;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translate(-10%, -50%);
+				border-radius: 10px;
+				background: $green-gray;
+				z-index: -1;
+				width: 100%;
+				height: 45%;
+				transition: .3s;
+			}
+
+			&.swiper-slide-thumb-active {
+				&:before {
+					height: 80%;
+				}
+				&+.slide {
+					&:before {
+						height: 60%;
+					}
+				}
+			}
+
+			&__img {
+				height: 492px;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 10px;
+
+				@include max-screen($pc-medium) {
+					height: 350px;
+				}
+			}
+
+		}
+	}
+
+	.arrow {
+		svg {
+			path {
+				fill: $dark;
+			}
+		}
+	}
+}

@@ -75,22 +75,8 @@
 		}
 	}
 
-	&__label {
-		display: inline-block;
-		border-radius: 10px;
-		background: $white2;
-		color: rgba(0, 30, 68, 0.56);
-		@include fz(21, 14);
-		line-height: 1.2;
-		@include value('padding-top', 25, 10);
-		@include value('padding-right', 52, 20);
-		@include value('padding-bottom', 25, 10);
-		@include value('padding-left', 52, 20);
+	.section-label {
 		@include value('margin-top', 125, 35);
-
-		@include max-screen($mobile-large) {
-			text-align: center;
-		}
 	}
 }
 

@@ -15,6 +15,7 @@ a {
 	transition: .3s;
 }
 
+
 .main {
 	overflow: hidden;
 }
@@ -23,12 +24,10 @@ a {
 	max-width: $container-pc;
 	width: 100%;
 	margin: 0 auto;
-	
+	padding: 0 15px;
+
 	@include max-screen($pc-medium) {
 		max-width: $container-mb;
-	}
-	@include max-screen($tablet-large) {
-		padding: 0 15px;
 	}
 }
 
@@ -36,10 +35,11 @@ a {
 	font-weight: 200;
 	@include fz(19, 14);
 	line-height: 1.6;
-	
+
 	@include max-screen($pc-medium) {
 		@include fz(15, 14);
 	}
+
 	@include max-screen($tablet-large) {
 		text-align: center;
 	}
@@ -67,6 +67,7 @@ a {
 			margin-left: 0;
 		}
 	}
+
 	&__link {
 		display: flex;
 		align-items: center;
@@ -81,6 +82,7 @@ a {
 			height: 35px;
 			border-radius: 5px;
 		}
+
 		@media (any-hover) {
 			&:hover {
 				background: rgba(0, 30, 68, 0.1);
@@ -94,12 +96,29 @@ a {
 		svg {
 			height: 30px;
 			max-height: 30px;
-			
+
 			@include max-screen($pc-medium) {
 				width: 20px;
 				max-height: 20px;
 			}
 		}
+	}
+}
+
+.section-label {
+	display: inline-block;
+	border-radius: 10px;
+	background: $white2;
+	color: rgba(0, 30, 68, 0.56);
+	@include fz(21, 14);
+	line-height: 1.2;
+	@include value('padding-top', 25, 10);
+	@include value('padding-right', 52, 20);
+	@include value('padding-bottom', 25, 10);
+	@include value('padding-left', 52, 20);
+
+	@include max-screen($mobile-large) {
+		text-align: center;
 	}
 }
 
@@ -112,7 +131,7 @@ a {
 
 	&__title {
 		line-height: .8;
-		@include fz(68, 26);
+		@include fz(68, 24);
 		line-height: 1.1;
 		font-family: $second-font;
 	}
@@ -122,28 +141,11 @@ a {
 		line-height: 1.8;
 		font-weight: 300;
 		@include value('margin-top', 40, 10);
-	
+
 		span {
 			font-weight: 500;
 		}
 	}
-}
-
-.arrow {
-	
-	@media (any-hover) {
-		&:hover {
-			svg path {
-				fill: $green;
-			}
-		}
-		&:active {
-			svg path {
-				fill: $blue_dark;
-			}
-		}
-	}
-
 }
 
 .btn {
@@ -157,7 +159,7 @@ a {
 	@include fz(21, 16);
 	text-decoration: none;
 	display: inline-block;
-	
+
 	&_white {
 		background: $white2;
 		color: $dark;
@@ -175,3 +177,76 @@ a {
 	}
 }
 
+.controls {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 15px;
+
+	@include max-screen($mobile-large) {
+		padding: 0;
+	}
+}
+
+.pagination {
+	padding: 10px 0;
+
+	@include max-screen($mobile-large) {
+		display: none;
+	}
+}
+.swiper-pagination-bullet {
+	width: 25px;
+	height: 25px;
+	border-radius: 2px;
+	background: $green-gray_dark;
+	opacity: 1;
+
+	&.swiper-pagination-bullet-active {
+		background: $green;
+		transform: rotate(-45deg);
+	}
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 10px;
+}
+
+.arrows {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 260px;
+
+	@include max-screen($tablet-large) {
+		width: 200px;
+	}
+
+	@include max-screen($mobile-large) {
+		margin: 0 auto;
+		width: 150px;
+	}
+}
+
+.arrow {
+	cursor: pointer;
+
+	@media (any-hover) {
+		&:hover {
+			svg path {
+				fill: $green;
+			}
+		}
+		
+		&:active {
+			svg path {
+				fill: $blue_dark;
+			}
+		}
+	}
+	
+	&_prev {
+		transform: rotate(-180deg);
+	}
+}

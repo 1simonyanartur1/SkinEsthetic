@@ -21,7 +21,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 	transition: .3s ease;
 
-	&.isActive {
+	&.active {
 
 		.hamburger-inner,
 		.hamburger-inner::before,
@@ -87,7 +87,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 		}
 	}
 
-	&.isActive {
+	&.active {
 		.hamburger-inner {
 			transform: rotate(225deg);
 			transition-delay: 0.12s;

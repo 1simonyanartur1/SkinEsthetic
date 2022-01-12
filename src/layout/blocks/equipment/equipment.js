@@ -17,7 +17,7 @@ export function equipment() {
 					clickable: true,
 					dynamicBullets: true,
 					renderBullet: function (index, className) {
-						return '<span class="pagination-bullet ' + className + '"></span>';
+						return '<span class="pagination-bullet pagination-bullet_white ' + className + '"></span>';
 					},
 				},
 			},

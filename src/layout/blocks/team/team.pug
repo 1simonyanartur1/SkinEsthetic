@@ -1,0 +1,60 @@
+mixin team
+	section.team
+		.container
+			.caption
+				h2.caption__title Высококвалифицированные косметологи
+			.section-label Все имеют опыт работы минимум 5 лет 
+			.inner
+				.swiper.slider-for-wrap
+					.swiper-wrapper.slider-for
+						.swiper-slide.slide
+							img.slide__img(src=img+"team/img1.jpg", alt="")
+							ul.slide-list 
+								li.slide-list-item
+									p.slide-list__title ФИО
+									p.slide-list__text Петрова Елизавета Степановна
+								li.slide-list-item
+									p.slide-list__title Должность
+									p.slide-list__text Косметолог 
+								li.slide-list-item
+									p.slide-list__title Стаж работы
+									p.slide-list__text 7 лет 
+						.swiper-slide.slide
+							img.slide__img(src=img+"team/img2.jpg", alt="")
+							ul.slide-list 
+								li.slide-list-item
+									p.slide-list__title ФИО
+									p.slide-list__text Петрова Елизавета Степановна
+								li.slide-list-item
+									p.slide-list__title Должность
+									p.slide-list__text Косметолог 
+								li.slide-list-item
+									p.slide-list__title Стаж работы
+									p.slide-list__text 7 лет 
+						.swiper-slide.slide
+							img.slide__img(src=img+"team/img3.jpg", alt="")
+							ul.slide-list 
+								li.slide-list-item
+									p.slide-list__title ФИО
+									p.slide-list__text Петрова Елизавета Степановна
+								li.slide-list-item
+									p.slide-list__title Должность
+									p.slide-list__text Косметолог 
+								li.slide-list-item
+									p.slide-list__title Стаж работы
+									p.slide-list__text 7 лет 
+				.swiper.slider-nav-wrap
+					.swiper-wrapper.slider-nav
+						.swiper-slide.slide
+							img.slide__img(src=img+"team/img1.jpg", alt="")
+						.swiper-slide.slide
+							img.slide__img(src=img+"team/img2.jpg", alt="")
+						.swiper-slide.slide
+							img.slide__img(src=img+"team/img3.jpg", alt="")
+			.controls
+				.pagination
+				.arrows
+					.arrow.arrow_prev
+						+arrow-icon
+					.arrow.arrow_next
+						+arrow-icon
