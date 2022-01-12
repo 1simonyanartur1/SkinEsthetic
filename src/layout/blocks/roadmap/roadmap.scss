@@ -1,0 +1,56 @@
+.roadmap {
+	@include value('padding-top', 60, 20);
+	@include value('padding-bottom', 60, 20);
+
+	.inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.caption {
+		@include max-screen($mobile-large) {
+			text-align: center;
+		}
+	}
+
+	.item {
+		width: 33.3%;
+		@include value('padding-right', 22, 12);
+
+		@include max-screen($tablet-middle) {
+			width: 50%;
+			margin-bottom: 15px;
+		}
+		@include max-screen($mobile-large) {
+			width: 100%;
+			padding-right: 0;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		&-icon {
+			width: 120px;
+			height: 120px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 10px;
+			background: $dark;
+		}
+
+		&__title {
+			@include value('margin-top', 32, 10);
+			@include value('margin-bottom', 32, 10);
+			font-weight: 500;
+			@include fz(24, 14);
+			line-height: 1.1;
+		}
+		
+		&__text {
+			@include fz(19, 14);
+			line-height: 1.6;
+		}
+	}
+}

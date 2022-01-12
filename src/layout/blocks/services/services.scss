@@ -23,6 +23,9 @@
 		@include max-screen($tablet-middle) {
 			height: 45%;
 		}
+		@include max-screen($mobile-large) {
+			height: 50%;
+		}
 	}
 
 	.caption {
