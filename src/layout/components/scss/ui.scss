@@ -104,13 +104,14 @@ a {
 }
 
 .caption {
+	@include value('margin-bottom', 40, 20);
 
 	&_center {
 		text-align: center;
 	}
 
 	&__title {
-		@include value('margin-bottom', 40, 20);
+		// @include value('margin-bottom', 40, 20);
 		line-height: .8;
 		@include fz(68, 22);
 		line-height: 1.1;
@@ -120,6 +121,7 @@ a {
 		@include fz(19, 15);
 		line-height: 1.8;
 		font-weight: 300;
+		@include value('margin-top', 40, 20);
 	}
 }
 

@@ -1,0 +1,72 @@
+.reasons {
+	@include value('padding-top', 60, 20);
+	@include value('padding-bottom', 60, 20);
+	
+	.inner {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 22px;
+		grid-row-gap: 22px;
+
+		@include max-screen($tablet-large) {
+			grid-template-rows: 1fr;
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+		}
+		@include max-screen($mobile-small) {
+			grid-template-rows: 1fr;
+			grid-template-columns: repeat(1, 1fr);
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+		}
+	}
+
+	.item {
+		position: relative;
+		overflow: hidden;
+		border-radius: 10px;
+		
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(312.88deg, rgba(3, 69, 75, 0.54) 30.97%, rgba(39, 214, 233, 0.54) 92.61%);
+		}
+		
+		&__img {
+			display: block;
+			width: 100%;
+			object-fit: cover;
+			height: 345px;
+
+			@include max-screen($pc-medium) {
+				height: 270px;
+			}
+			@include max-screen($mobile-medium) {
+				height: 150px;
+			}
+			@include max-screen-height($mobile-landscape-height) {
+				height: 180px;
+			}
+		}
+
+		&__title {
+			position: absolute;
+			z-index: 2;
+			left: 0;
+			bottom: 0;
+			@include value('padding-left', 52, 10);
+			@include value('padding-right', 52, 10);
+			@include value('padding-bottom', 40, 10);
+			@include fz(24, 14);
+			color: $white2;
+			line-height: 1.1;
+		}
+	}
+}
