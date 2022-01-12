@@ -6,6 +6,9 @@ body {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr auto;
+	max-width: 1920px;
+	overflow-x: hidden;
+	margin: 0 auto;
 }
 
 a {
@@ -110,6 +113,7 @@ a {
 		@include value('margin-bottom', 40, 20);
 		line-height: .8;
 		@include fz(68, 22);
+		line-height: 1.1;
 		font-family: $second-font;
 	}
 	&__text {
@@ -117,4 +121,21 @@ a {
 		line-height: 1.8;
 		font-weight: 300;
 	}
+}
+
+.arrow {
+	
+	@media (any-hover) {
+		&:hover {
+			svg path {
+				fill: $green;
+			}
+		}
+		&:active {
+			svg path {
+				fill: $blue_dark;
+			}
+		}
+	}
+
 }

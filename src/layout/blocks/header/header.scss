@@ -16,6 +16,9 @@
 		.logo {
 			width: 140px;
 
+			@include max-screen($pc-medium) {
+				width: 100px;
+			}
 			@include max-screen($tablet-large) {
 				width: 100px;
 			}

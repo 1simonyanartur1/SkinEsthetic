@@ -1,33 +1,26 @@
 export function equipment() {
-	var swiper = new Swiper(".mySwiper", {
+	var swiper = new Swiper(".equipment .slider-wrap", {
 		slidesPerView: "auto",
-		spaceBetween: 30,
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
+		spaceBetween: 22,
+		loop: true,
+		navigation: {
+			nextEl: ".equipment .arrow_next",
+			prevEl: ".equipment .arrow_prev",
 		},
+		breakpoints: {
+			320: {
+				pagination: false,
+			},
+			700: {
+				pagination: {
+					el: ".equipment .pagination",
+					clickable: true,
+					dynamicBullets: true,
+					renderBullet: function (index, className) {
+						return '<span class="pagination-bullet ' + className + '"></span>';
+					},
+				},
+			},
+		}
 	});
-
-	// var swiper = new Swiper("..equipment .slider-wrap", {
-	// 	slidesPerView: 1,
-	// 	spaceBetween: 10,
-	// 	pagination: {
-	// 		el: ".swiper-pagination",
-	// 		clickable: true,
-	// 	},
-	// 	breakpoints: {
-	// 		640: {
-	// 			slidesPerView: 2,
-	// 			spaceBetween: 20,
-	// 		},
-	// 		768: {
-	// 			slidesPerView: 4,
-	// 			spaceBetween: 40,
-	// 		},
-	// 		1024: {
-	// 			slidesPerView: 5,
-	// 			spaceBetween: 50,
-	// 		},
-	// 	},
-	// });
 }
