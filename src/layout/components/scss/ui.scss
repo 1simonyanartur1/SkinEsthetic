@@ -113,7 +113,7 @@ a {
 	&__title {
 		// @include value('margin-bottom', 40, 20);
 		line-height: .8;
-		@include fz(68, 22);
+		@include fz(68, 26);
 		line-height: 1.1;
 		font-family: $second-font;
 	}
@@ -141,3 +141,33 @@ a {
 	}
 
 }
+
+.btn {
+	@include value('padding-top', 28, 14);
+	@include value('padding-bottom', 28, 14);
+	@include value('padding-left', 92, 32);
+	@include value('padding-right', 92, 32);
+	text-align: center;
+	border-radius: 10px;
+	font-weight: 500;
+	@include fz(21, 16);
+	text-decoration: none;
+	display: inline-block;
+	
+	&_white {
+		background: $white2;
+		color: $dark;
+
+		@media (any-hover) {
+			&:hover {
+				background: $dark;
+				color: $white2;
+			}
+
+			&:active {
+				background: $blue_dark;
+			}
+		}
+	}
+}
+

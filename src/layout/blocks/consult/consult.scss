@@ -1,0 +1,202 @@
+.consult {
+	@include value('padding-top', 240, 40);
+	@include value('padding-bottom', 60, 20);
+	
+	@include max-screen($pc-medium) {
+		@include value('padding-top', 100, 40);
+	}
+	@include max-screen($tablet-middle) {
+		padding-top: 20px;
+	}
+	
+	.container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.col {
+		position: relative;
+
+		&_large {
+			@include value('padding-top', 64, 20);
+			@include value('padding-right', 33, 15);
+			width: 66%;
+
+			@include max-screen($tablet-middle) {
+				width: 100%;
+			}
+			@include max-screen($tablet-middle) {
+				@include value('padding', 25, 15);
+			}
+			
+			&:before {
+				content: '';
+				display: block;
+				background: $green-gray;
+				border-radius: 0 10px 10px 0;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 70vw;
+				height: 100%;
+				z-index: -1;
+
+				@include max-screen($tablet-middle) {
+					width: 100%;
+					border-radius: 10px;
+				}
+			}
+		}
+
+		&_small {
+			border-radius: 10px;
+			background: $dark;
+			width: 32%;
+			@include value('padding-top', 94, 30);
+			@include value('padding-left', 52, 20);
+			@include value('padding-right', 52, 20);
+			@include value('padding-bottom', 58, 20);
+
+			@include max-screen($pc-medium) {
+				@include value('padding-left', 30, 15);
+				@include value('padding-right', 30, 15);
+			}
+			@include max-screen($tablet-middle) {
+				width: 100%;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	.inner {
+		max-width: 442px;
+		margin-left: auto;
+		@include max-screen($tablet-middle) {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+
+	.caption {
+
+
+		&__title {
+			line-height: .8;
+		}
+	}
+
+	&__doc {
+		display: block;
+		width: calc(100% - 500px);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		object-fit: contain;
+		
+		@include max-screen($pc-medium) {
+			width: 60%;
+			transform: translate(-40%, 0);
+		}
+		@include max-screen($tablet-middle) {
+			display: none;
+		}
+	}
+
+	.form {
+		color: $white2;
+
+		&__title {
+			@include fz(24, 16);
+			font-weight: 300;
+		}
+
+		&__subtitle {
+			@include fz(32, 20);
+			font-weight: 700;
+		}
+
+		&-block {
+			@include value('margin-top', 30, 15);
+		}
+
+		&__label {
+			@include value('padding-left', 20, 10);
+			@include value('padding-bottom', 11, 5);
+			font-weight: 500;
+			display: block;
+			width: 100%;
+		}
+
+		&__input {
+			width: 100%;
+			@include value('height', 70, 40);
+			@include value('line-height', 70, 40);
+			@include value('padding-left', 20, 8);
+			@include value('padding-right', 20, 8);
+			font-weight: 300;
+			color: $purple;
+			background: $white2;
+			border: 1px solid transparent;
+			
+			&:focus {
+				border-color: $green;
+			}
+
+			&::placeholder {
+				color: inherit;
+				font: inherit;
+				font-size: inherit;
+			}
+		}
+
+		&__btn {
+			@include value('height', 70, 40);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $green;
+			border-radius: 2px;
+			text-align: center;
+			color: $white2;
+			font-weight: 800;
+			@include fz(21, 14);
+			width: 100%;
+			transition: .3s;
+			cursor: pointer;
+
+			@include max-screen($tablet-middle) {
+				width: 100%;
+			}
+
+			@media (any-hover) {
+				&:hover {
+					background: $dark;
+				}
+
+				&:active {
+					background: $blue_dark;
+				}
+			}
+		}
+
+		&__info {
+			color: $white2;
+			line-height: 1.2;
+			line-height: 1.6;
+			text-align: center;
+
+			@include max-screen($tablet-middle) {
+				padding: 0;
+				text-align: center;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+				border-bottom: 1px solid $white2;
+			}
+		}
+	}
+
+}
