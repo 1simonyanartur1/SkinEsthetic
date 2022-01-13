@@ -125,6 +125,11 @@ a {
 .caption {
 	@include value('margin-bottom', 40, 20);
 
+	&_w1104 {
+		max-width: 1104px;
+		width: 100%;
+	}
+
 	&_white {
 		color: $white;
 	}

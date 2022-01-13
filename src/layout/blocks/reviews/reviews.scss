@@ -119,10 +119,6 @@
 	@include value('padding-top', 50, 25);
 	padding-bottom: 10px;
 
-	.caption {
-		max-width: 1104px;
-	}
-
 	.inner {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;

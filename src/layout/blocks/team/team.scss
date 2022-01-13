@@ -1,4 +1,6 @@
 .team {
+	@include value('padding-top', 60, 20);
+	@include value('padding-bottom', 30, 10);
 
 	.section-label {
 		@include value('margin-bottom', 38, 14);
