@@ -1,0 +1,103 @@
+
+.subscribe-form {
+	background: $dark;
+	@include value('padding-top', 60, 20);
+	@include value('padding-bottom', 60, 20);
+
+	.form {
+		color: $white2;
+		max-width: 1085px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	
+		&-block {
+			@include value('margin-top', 30, 15);
+			width: 49%;
+
+			@include max-screen($tablet-middle) {
+				width: 100%;
+			}
+
+			&_last {
+				margin-left: auto;
+			}
+		}
+	
+		&__input {
+			width: 100%;
+			@include value('height', 70, 40);
+			@include value('line-height', 70, 40);
+			@include value('padding-left', 20, 8);
+			@include value('padding-right', 20, 8);
+			font-weight: 300;
+			color: $purple;
+			background: $white2;
+			border: 1px solid transparent;
+			border-radius: 5px;
+
+			@include max-screen($tablet-middle) {
+				text-align: center;
+			}
+	
+			&:focus {
+				border-color: $green;
+			}
+	
+			&::placeholder {
+				color: inherit;
+				font: inherit;
+				font-size: inherit;
+			}
+		}
+	
+		&__btn {
+			@include value('height', 70, 40);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $green;
+			border-radius: 5px;
+			text-align: center;
+			color: $white2;
+			font-weight: 800;
+			@include fz(21, 14);
+			width: 100%;
+			transition: .3s;
+			cursor: pointer;
+	
+			@include max-screen($tablet-middle) {
+				width: 100%;
+			}
+	
+			@media (any-hover) {
+				&:hover {
+					background: $dark;
+				}
+	
+				&:active {
+					background: $blue_dark;
+				}
+			}
+		}
+	
+		&__info {
+			color: $white2;
+			line-height: 1.6;
+			text-align: center;
+	
+			@include max-screen($tablet-middle) {
+				padding: 0;
+				text-align: center;
+			}
+	
+			a {
+				color: inherit;
+				text-decoration: none;
+				border-bottom: 1px solid $white2;
+			}
+		}
+	}
+}

@@ -129,5 +129,6 @@
 	&__num {
 		@include fz(24, 14);
 		@include value('margin-left', 10, 6);
+		line-height: 1.1;
 	}
 }

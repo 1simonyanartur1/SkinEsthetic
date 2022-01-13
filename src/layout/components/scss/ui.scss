@@ -138,11 +138,15 @@ a {
 		@include fz(68, 24);
 		line-height: 1.1;
 		font-family: $second-font;
+		
+		@include max-screen($pc-medium) {
+			@include fz(56, 24);
+		}
 	}
 
 	&__text {
 		@include fz(19, 15);
-		line-height: 1.8;
+		line-height: 1.6;
 		font-weight: 300;
 		@include value('margin-top', 40, 10);
 
@@ -172,6 +176,22 @@ a {
 			&:hover {
 				background: $dark;
 				color: $white2;
+			}
+
+			&:active {
+				background: $blue_dark;
+			}
+		}
+	}
+
+	&_green {
+		background: $green;
+		box-shadow: 0px 2px 34px rgba(53, 210, 226, 0.4);
+		color: $white2;
+
+		@media (any-hover) {
+			&:hover {
+				background: $dark;
 			}
 
 			&:active {
@@ -236,7 +256,6 @@ a {
 	
 }
 
-
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
 	margin: 0 10px;
@@ -252,9 +271,6 @@ a {
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
 	transform: scale(1);
 }
-
-
-
 
 .arrows {
 	display: flex;

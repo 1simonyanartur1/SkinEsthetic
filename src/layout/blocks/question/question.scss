@@ -1,0 +1,102 @@
+.question {
+	@include value('padding-top', 90, 20);
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.col {
+		width: 50%;
+		min-height: 740px;
+		position: relative;
+
+		@include max-screen($pc-medium) {
+			min-height: 640px;
+		}
+		@include max-screen($tablet-large) {
+			min-height: 540px;
+		}
+		@include max-screen($tablet-middle) {
+			min-height: 440px;
+		}
+		@include max-screen($mobile-large) {
+			width: 100%;
+			min-height: 100px;
+		}
+
+		&_left {
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				@include value('right', 80, 20);
+				border-radius: 0 10px 0 0;
+				top: 0;
+				height: 100%;
+				width: 70vw;
+				z-index: -1;
+				background: $green-gray;
+			}
+
+			@include max-screen($mobile-large) {
+				display: none;
+			}
+		}
+
+		&_right {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+
+			@include max-screen($mobile-large) {
+				text-align: center;
+				align-items: center;
+				padding-bottom: 15px;
+				padding-top: 25px;
+			}
+		}
+
+		&-inner {
+			text-align: center;
+		}
+	}
+
+	&__doc {
+		position: absolute;
+		max-width: 90%;
+		height: 110%;
+		object-fit: contain;
+		left: 0;
+		bottom: 0;
+		object-position: bottom;
+	}
+
+	&__text {
+		color: rgba(0, 30, 68, 0.69);
+		font-weight: 400;
+		@include value('margin-top', 30, 15);
+	}
+
+	&__info {
+		@include fz(24, 15);
+		@include value('padding-left', 50, 30);
+		@include value('margin-bottom', 66, 26);
+		position: relative;
+		font-weight: 400;
+
+		&:before {
+			content: '';
+			display: block;
+			@include value('width', 22, 12);
+			@include value('height', 22, 12);
+			border-radius: 50%;
+			background: $green-green;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+}

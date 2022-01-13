@@ -38,6 +38,10 @@
 			justify-content: center;
 			border-radius: 10px;
 			background: $dark;
+
+			@include max-screen($mobile-large) {
+				width: 100%;
+			}
 		}
 
 		&__title {
