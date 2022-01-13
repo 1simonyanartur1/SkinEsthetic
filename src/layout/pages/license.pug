@@ -1,0 +1,24 @@
+extends ../layout.pug
+
+block head-inner
+	+title('Index page')
+	+desc('Index page description')
+
+	link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+
+block main
+	+breadcrumbs
+
+	section.license
+		.container
+			.caption.caption_w1104
+				h1.caption__title Лицензии
+				p.caption__text Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения. С другой стороны, сложившаяся структура организации выявляет срочную потребность приоритизации разума над эмоциями. 
+			.inner
+				.item
+					img.item__img(src=img+"license/img1.jpg", alt="")
+
+	+contact
+
+block body-bottom-inner
+	script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
