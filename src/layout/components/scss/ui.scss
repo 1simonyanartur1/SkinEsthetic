@@ -156,6 +156,27 @@ a {
 	}
 }
 
+.mini-caption {
+	@include value('margin-top', 40, 20);
+	@include value('margin-bottom', 40, 20);
+
+	&__title {
+		font-weight: 400;
+		@include fz(24, 16);
+		line-height: 1.2;
+		
+		span {
+			color: $green;
+		}
+	}
+	
+	&__text {
+		@include fz(13, 12);
+		font-weight: 300;
+	}
+
+}
+
 .btn {
 	@include value('padding-top', 28, 14);
 	@include value('padding-bottom', 28, 14);
@@ -192,6 +213,21 @@ a {
 		@media (any-hover) {
 			&:hover {
 				background: $dark;
+			}
+
+			&:active {
+				background: $blue_dark;
+			}
+		}
+	}
+
+	&_dark {
+		background: $dark;
+		color: $white2;
+
+		@media (any-hover) {
+			&:hover {
+				background: $green;
 			}
 
 			&:active {

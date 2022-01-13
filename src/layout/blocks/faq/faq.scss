@@ -1,1 +1,84 @@
-.faq {}
+.faq {
+	@include value('padding-top', 50, 20);
+}
+
+.spoiler {
+	overflow: hidden;
+	border-radius: 10px;
+	background: $green-gray;
+	@include value('margin-bottom', 19, 5);
+
+	@include max-screen($mobile-large) {
+		border-radius: 4px;
+	}
+
+	&.active {
+
+		.spoiler__title {
+			background: $dark;
+			color: $white;
+		}
+
+		.spoiler__plus {
+			&:before {
+				content: '-';
+			}
+		}
+
+		.text-container {
+			display: block;
+		}
+	}
+
+	&__title {
+		@include value('padding-left', 30, 6);
+		@include value('padding-right', 64, 40);
+		@include value('padding-top', 18, 4);
+		@include value('padding-bottom', 18, 4);
+		display: flex;
+		align-items: center;
+		@include fz(19, 14);
+		line-height: 1.2;
+		font-weight: 400;
+		position: relative;
+		min-height: 82px;
+		cursor: pointer;
+	}
+
+	&__plus {
+		position: absolute;
+		@include value('right', 18, 4);
+		@include value('top', 18, 4);
+		@include value('width', 46, 26);
+		@include value('height', 46, 26);
+		background: $green;
+		font-weight: 700;
+		border-radius: 10px;
+
+		@include max-screen($mobile-large) {
+			border-radius: 4px;
+		}
+		
+		&:before {
+			content: '+';
+			@include fz(24, 16);
+			color: $white;
+			line-height: 1.1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.text-container {
+		display: none;
+		overflow: hidden;
+		background: $header-scroll;
+		@include value('padding-top', 15, 4);
+		@include value('padding-left', 30, 6);
+		@include value('padding-right', 30, 6);
+		@include value('padding-bottom', 54, 20);
+	}
+
+}
