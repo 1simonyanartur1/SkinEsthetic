@@ -35,7 +35,7 @@ global.$ = {
 			json: 'src/layout/blocks/**/*.json',
 			files: 'src/files/**/*',
 			robots: 'src/robots.txt',
-			libsCSS: ['src/layout/components/libs/swiper/swiper-bundle.min.css'],
+			libsCSS: [],
 			libsJS: [],
     },
     build: {

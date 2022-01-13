@@ -6,6 +6,37 @@
 		@include value('padding-left', 50, 10);
 		@include value('padding-right', 50, 10);
 	}
+
+	.inner {
+		position: relative;
+		@include value('padding-top', 60, 15);
+		@include value('padding-bottom', 80, 20);
+		@include value('margin-bottom', 60, 15);
+
+		@include max-screen($pc-medium) {
+			@include value('padding-top', 40, 15);
+			@include value('padding-bottom', 50, 20);
+			@include value('margin-bottom', 40, 15);
+		}
+		
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			background: $dark;
+			left: -5%;
+			right: -5%;
+			top: 0;
+			bottom: 0;
+			z-index: -1;
+			border-radius: 10px;
+		}
+	}
+
+	.slider {
+		display: flex;
+		align-items: stretch;
+	}
 	
 	.slide {
 		background: $white2;
@@ -14,5 +45,89 @@
 		@include value('padding-bottom', 40, 10);
 		@include value('padding-left', 30, 10);
 		border-radius: 10px;
+		height: 424px;
+		
+		@include max-screen($pc-medium) {
+			@include value('padding-top', 30, 10);
+			@include value('padding-right', 25, 10);
+			@include value('padding-bottom', 30, 10);
+			@include value('padding-left', 25, 10);
+			height: 380px;
+		}
+
+		@include max-screen($tablet-mini) {
+			height: 300px;
+		}
+		@include max-screen-height($mobile-landscape-height) {
+			height: 300px;
+		}
+
+		&-header {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			@include value('margin-bottom', 21, 10);
+
+			&-inner {
+				width: calc(100% - 120px);
+			}
+		}
+
+		&__name {
+			font-weight: 700;
+			line-height: 1.1;
+			@include fz(24, 16);
+			@include value('margin-bottom', 13, 5);
+
+			@include max-screen($pc-medium) {
+				@include fz(20, 16);
+			}
+		}
+		
+		&__date {
+			font-weight: 400;
+			line-height: 1.2;
+			@include fz(17, 12);
+			@include value('margin-bottom', 24, 10);
+			
+			@include max-screen($pc-medium) {
+				@include fz(14, 12);
+			}
+		}
+
+		&__text {
+			line-height: 1.4;
+			@include fz(19, 14);
+
+			@include max-screen($pc-medium) {
+				@include fz(17, 14);
+			}
+		}
+
+		&__img {
+			border-radius: 20px;
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+		}
+	}
+
+}
+
+.stars {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	@include value('padding', 10, 5);
+	color: $white;
+	background: $orange;
+	font-weight: 700;
+	border-radius: 10px;
+
+	&__num {
+		@include fz(24, 14);
+		@include value('margin-left', 10, 6);
 	}
 }

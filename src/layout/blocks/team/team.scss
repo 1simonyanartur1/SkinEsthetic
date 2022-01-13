@@ -6,6 +6,10 @@
 
 	.container {
 		max-width: 1600px;
+
+		@include max-screen($pc-medium) {
+			max-width: $container-mb;
+		}
 	}
 
 	.inner {
@@ -61,11 +65,19 @@
 					@include fz(17, 13);
 					color: #7E8FA5;
 					@include value('margin-bottom', 10, 5);
+
+					@include max-screen($pc-medium) {
+						@include fz(14, 12);
+					}
 				}
 
 				&__text {
 					@include fz(29, 16);
 					color: $white2;
+
+					@include max-screen($pc-medium) {
+						@include fz(22, 16);
+					}
 				}
 
 			}
@@ -124,11 +136,4 @@
 		}
 	}
 
-	.arrow {
-		svg {
-			path {
-				fill: $dark;
-			}
-		}
-	}
 }

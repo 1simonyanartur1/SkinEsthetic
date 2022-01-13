@@ -194,34 +194,84 @@ a {
 
 .pagination {
 	padding: 10px 0;
+	width: 160px !important;
+	transform: translate(0, 0) !important;
+	@include value('margin-right', 180, 20);
+	overflow: visible !important; 
+
+	&_white {
+		.swiper-pagination-bullet {
+			background: $white2;
+
+			&.swiper-pagination-bullet-active {
+				background: $green;
+			}
+		}
+	}
+	&_dark {
+		.swiper-pagination-bullet {
+			background: $green-gray_dark;
+
+			&.swiper-pagination-bullet-active {
+				background: $green;
+			}
+		}
+	}
 
 	@include max-screen($mobile-large) {
 		display: none;
 	}
-}
-.swiper-pagination-bullet {
-	width: 25px;
-	height: 25px;
-	border-radius: 2px;
-	background: $green-gray_dark;
-	opacity: 1;
 
-	&.swiper-pagination-bullet-active {
-		background: $green;
-		transform: rotate(-45deg);
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		border-radius: 2px;
+		opacity: 1;
+		transition: .3s;
+	
+		&.swiper-pagination-bullet-active {
+			transform: rotate(-45deg) scale(1.8);
+		}
 	}
+	
 }
+
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
 	margin: 0 10px;
 }
 
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+	transform: scale(0);
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next, 
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+	transform: scale(1);
+}
+
+
+
+
 .arrows {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 260px;
+
+	&_white {
+		.arrow svg path {
+			fill: $white2;
+		}
+	}
+	&_dark {
+		.arrow svg path {
+			fill: $dark;
+		}
+	}
 
 	@include max-screen($tablet-large) {
 		width: 200px;
@@ -235,6 +285,12 @@ a {
 
 .arrow {
 	cursor: pointer;
+	transition: .3s;
+
+	&.swiper-button-disabled {
+		opacity: .2;
+		cursor: not-allowed;
+	}
 
 	@media (any-hover) {
 		&:hover {
