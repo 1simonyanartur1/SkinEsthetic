@@ -1,0 +1,28 @@
+mixin contact
+	section.contact
+		.container
+			.caption
+				h2.caption__title Контакты
+				p.caption__text Постоянное информационно-пропагандистское обеспечение нашей деятельности
+		.row
+			#map.map(data-lat="59.939099" data-lng="30.315877")
+			.inner
+				.block
+					h3.block__title Мы находимся по адресу
+					p.block__text г.Санкт-Петербург, <br> ул.Петроградная 90
+				.block
+					h3.block__title Время работы
+					p.block__text с 9.00 - 19.00, <br> сб-вс: выходной
+				.block
+					h3.block__title E-mail
+					ul.block-list 
+						li.block-list-item 
+							a.block__link(href="mailto:test@gmail.com") test@gmail.com
+				.block
+					h3.block__title Телефон
+					ul.block-list 
+						li.block-list-item 
+							a.block__link(href="tel:+75466645352") +7 (546) 664 53 52
+				.block
+					h3.block__title Мы в соц.сетях
+					+social-list

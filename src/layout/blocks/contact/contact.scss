@@ -1,0 +1,89 @@
+.contact {
+	@include value('padding-top', 50, 20);
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.inner {
+		width: 41.67%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		border-radius: 10px;
+		background: $dark;
+		@include value('padding-top', 106, 30);
+		@include value('padding-left', 53, 15);
+		@include value('padding-right', 53, 15);
+		@include value('padding-bottom', 106, 30);
+		
+		@include max-screen($pc-medium) {
+			@include value('padding-top', 75, 30);
+			@include value('padding-left', 35, 15);
+			@include value('padding-right', 35, 15);
+			@include value('padding-bottom', 75, 30);
+		}
+		@include max-screen($tablet-large) {
+			width: 46.67%;
+		}
+		@include max-screen($tablet-middle) {
+			width: 100%;
+			border-radius: 0;
+		}
+		@include max-screen-height($mobile-landscape-height) {
+			width: 50%;
+			border-radius: 0;
+		}
+	}
+	
+	.block {
+		width: 48%;
+		@include value('margin-bottom', 54, 15);
+		
+		@include max-screen($pc-medium) {
+			@include value('margin-bottom', 30, 15);
+		}
+		
+		&__title {
+			color: $gray_dark;
+			@include fz(17, 13);
+			@include value('margin-bottom', 10, 5);
+			line-height: 1.1;
+			font-weight: 300;
+		}
+		
+		&__text,
+		&__link {
+			text-decoration: none;
+			line-height: 1.4;
+			color: $white2;
+			@include fz(24, 15);
+			@include value('margin-bottom', 10, 5);
+		}
+	}
+}
+
+.map {
+	width: 50%;
+	border-radius: 0 10px 10px 0;
+	overflow: hidden;
+	margin-right: 20px;
+	min-height: 250px;
+	max-height: 650px;
+	
+	@include max-screen($pc-medium) {
+		max-height: 450px;
+	}
+	@include max-screen($tablet-middle) {
+		width: 100%;
+		border-radius: 0;
+		margin: 0;
+		height: 300px;
+	}
+	@include max-screen-height($mobile-landscape-height) {
+		width: 50%;
+		border-radius: 0;
+		margin: 0;
+	}
+}

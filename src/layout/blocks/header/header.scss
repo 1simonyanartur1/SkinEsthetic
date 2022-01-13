@@ -164,7 +164,7 @@
 			background: $body;
 			transition: .3s;
 
-			&.isActive {
+			&.active {
 				left: 0;
 			}
 		}

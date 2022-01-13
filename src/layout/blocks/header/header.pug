@@ -22,31 +22,13 @@ header.header
 						a.menu__link(href="faq.html") FAQ
 					li.menu-item
 						a.menu__link(href="contact.html") Контакты
-			ul.social 
-				li.social-item
-					a.social__link(href="#") 
-						+instagram-icon
-				li.social-item
-					a.social__link(href="#") 
-						+vk-icon
-				li.social-item
-					a.social__link(href="#") 
-						+tiktok-icon
+			+social-list
 	.wrapper.wrapper_mobile
 		.container
 			.row
 				a.logo(href="/")
 					img(src=img+"logo.png", alt="")
-				ul.social 
-					li.social-item
-						a.social__link(href="#") 
-							+instagram-icon
-					li.social-item
-						a.social__link(href="#") 
-							+vk-icon
-					li.social-item
-						a.social__link(href="#") 
-							+tiktok-icon
+				+social-list
 				+hamburger
 			.mobileMenu-wrapper#menu
 				ul.mobileMenu
