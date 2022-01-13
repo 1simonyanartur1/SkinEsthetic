@@ -390,6 +390,8 @@ a {
 					border: 0;
 					@include value('padding-top', 14, 6);
 					@include value('padding-bottom', 14, 6);
+					padding-left: 0;
+					padding-right: 0;
 
 					svg {
 						margin-right: 20px;

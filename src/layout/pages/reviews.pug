@@ -1,0 +1,115 @@
+extends ../layout.pug
+
+block head-inner
+	+title('Index page')
+	+desc('Index page description')
+
+	link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+
+block main
+	+breadcrumbs
+	
+	section.reviews-page
+		.container
+			.caption
+					h1.caption__title Отзывы
+					p.caption__text Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения. С другой стороны, сложившаяся структура организации выявляет срочную потребность приоритизации разума над эмоциями.
+			.inner
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+				.item
+					.item-header
+						img.item__img(src=img+"reviews/img1.jpg", alt="")
+						.item-header-inner
+							h3.item__name Елена Измайлова
+							p.item__date Опубликовано 30 октября 2021
+							.stars
+								+star-icon
+								.stars__num 3
+					p.item__text Противоположная точка зрения подразумевает, что представители современных социальных резервов призывают. А это на тот случай если будет очень много текста, как здесь.
+			ul.actions
+				li.actions-item
+					a.btn.btn_dark(href="") Загрузить еще
+	
+	+contact
+
+block body-bottom-inner
+	script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')

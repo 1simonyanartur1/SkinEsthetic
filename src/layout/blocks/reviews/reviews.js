@@ -1,13 +1,13 @@
 export function reviews() {
-	var swiper = new Swiper(".reviews .slider-wrap", {
+	var swiper = new Swiper(".reviews-slider .slider-wrap", {
 		spaceBetween: 24,
 		loop: true,
 		navigation: {
-			nextEl: ".reviews .arrow_next",
-			prevEl: ".reviews .arrow_prev",
+			nextEl: ".reviews-slider .arrow_next",
+			prevEl: ".reviews-slider .arrow_prev",
 		},
 		pagination: {
-			el: ".reviews .pagination",
+			el: ".reviews-slider .pagination",
 			clickable: true,
 			dynamicBullets: true,
 		},

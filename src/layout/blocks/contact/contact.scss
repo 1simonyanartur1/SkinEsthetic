@@ -31,6 +31,9 @@
 			width: 100%;
 			border-radius: 0;
 		}
+		@include max-screen($mobile-large) {
+			width: 100%;
+		}
 		@include max-screen-height($mobile-landscape-height) {
 			width: 50%;
 			border-radius: 0;
@@ -80,6 +83,9 @@
 		border-radius: 0;
 		margin: 0;
 		height: 300px;
+	}
+	@include max-screen($mobile-large) {
+		width: 100%;
 	}
 	@include max-screen-height($mobile-landscape-height) {
 		width: 50%;
