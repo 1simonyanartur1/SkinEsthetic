@@ -1,0 +1,32 @@
+mixin ba
+	section.ba
+		.container
+			.col.col_small
+				.caption
+					h2.caption__title До / после
+				.swiper.slider-nav-wrap
+					.swiper-wrapper.slider-nav
+						.swiper-slide.slide
+							p.slide__name Ольга Ивановна
+							p.slide__type Тип процедуры
+							h3.slide__title Пилинг кожи
+							p.slide__text Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения.
+						.swiper-slide.slide
+							p.slide__name Ольга Ивановна
+							p.slide__type Тип процедуры
+							h3.slide__title Пилинг кожи
+							p.slide__text Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения.
+			.col.col_big
+				.swiper.slider-for-wrap
+					.swiper-wrapper.slider-for
+						a.swiper-slide.slide(href=img+"ba/img.jpg" data-fancybox="ba") 
+							img.slide__img(src=img+"ba/img.jpg", alt="")
+						a.swiper-slide.slide(href=img+"ba/img.jpg" data-fancybox="ba") 
+							img.slide__img(src=img+"ba/img.jpg", alt="")
+				.controls
+					.pagination.pagination_dark
+					.arrows.arrows_dark
+						.arrow.arrow_prev
+							+arrow-icon
+						.arrow.arrow_next
+							+arrow-icon

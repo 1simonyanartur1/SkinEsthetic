@@ -1,3 +1,4 @@
+import { ba } from "../blocks/ba/ba";
 import { equipment } from "../blocks/equipment/equipment";
 import { hamburger } from "../blocks/hamburger/hamburger";
 import { header } from "../blocks/header/header";
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	header();
 	hamburger();
 	equipment();
+	ba();
 	team();
 	reviews();
 });

@@ -1,0 +1,104 @@
+.ba {
+	@include value('padding-top', 120, 40);
+	@include value('padding-bottom', 60, 20);
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.col {
+
+		&_small {
+			width: 32%;
+			@include value('padding-top', 60, 20);
+			@include value('padding-bottom', 60, 20);
+
+			@include max-screen($pc-medium) {
+				padding: 0;
+			}
+			@include max-screen($tablet-middle) {
+				width: 48%;
+			}
+			@include max-screen($mobile-large) {
+				width: 100%;
+			}
+		}
+		
+		&_big {
+			width: 67%;
+			@include max-screen($tablet-middle) {
+				width: 48%;
+			}
+			@include max-screen($mobile-large) {
+				width: 100%;
+			}
+		}
+
+	}
+
+	.slide {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		&__name {
+			border-radius: 50px;
+			background: $white2;
+			@include value('padding-top', 25, 10);
+			@include value('padding-left', 59, 15);
+			@include value('padding-right', 59, 15);
+			@include value('padding-bottom', 25, 10);
+			@include value('margin-bottom', 50, 15);
+			color: rgba(0, 30, 68, 0.56);
+			@include fz(21, 14);
+			font-weight: 400;
+		}
+		
+		&__type {
+			font-weight: 700;
+			color: rgba(0, 30, 68, 0.35);
+			@include fz(21, 14);
+			@include value('margin-bottom', 10, 5);
+
+			@include max-screen($tablet-middle) {
+				display: none;
+			}
+		}
+		
+		&__title {
+			@include fz(24, 15);
+			line-height: 1.2;
+			font-weight: 400;
+			@include value('margin-bottom', 30, 10);
+		}
+		
+		&__text {
+			@include fz(19, 13);
+			line-height: 1.4;
+			margin-bottom: 15px;
+		}
+		
+		&__img {
+			width: 100%;
+		}
+	}
+
+	.slider-nav-wrap {
+		margin: 0;
+	}
+	.slider-for-wrap {
+		margin: 0;
+		@include value('padding', 16, 5);
+		@include value('margin-bottom', 30, 10);
+		border-radius: 10px;
+		background: $green-gray;
+	}
+
+	.pagination {
+		@include max-screen($tablet-middle) {
+			display: none;
+		}
+	}
+}
