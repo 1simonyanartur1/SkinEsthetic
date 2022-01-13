@@ -326,3 +326,93 @@ a {
 		transform: rotate(-180deg);
 	}
 }
+
+.breadcrumbs {
+	@include value('padding-top', 190, 80);
+
+	.list {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: auto;
+		width: 100%;
+		padding-bottom: 10px;
+
+		&-item {
+			@include value('min-width', 340, 200);
+			@include value('margin-right', 30, 15);
+
+			@include max-screen($mobile-large) {
+				min-width: 220px;
+			}
+
+			&:first-child {
+				min-width: 160px;
+				max-width: none;
+
+				.list__link {
+					background: transparent;
+					border: 0;
+					@include value('padding-top', 14, 6);
+					@include value('padding-bottom', 14, 6);
+
+					svg {
+						margin-right: 20px;
+					}
+
+					@media (any-hover) {
+						&:hover {
+							color: $green;
+
+							svg path {
+								fill: $green;
+							}
+						}
+
+						&:active {
+							color: $blue_dark;
+							
+							svg path {
+								fill: $blue_dark;
+							}
+						}
+					}
+				}
+			}
+			&:not(:first-child) {
+				.list__link {
+					@media (any-hover) {
+						&:hover {
+							background: transparent;
+							color: $green;
+						}
+						
+						&:active {
+							color: $white2;
+							background: $blue_dark;
+							border-color: $blue_dark;
+						}
+					}
+				}
+			}
+		}
+
+		&__link {
+			text-decoration: none;
+			display: block;
+			max-width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			@include value('padding-top', 14, 6);
+			@include value('padding-bottom', 14, 6);
+			@include value('padding-right', 32, 12);
+			@include value('padding-left', 32, 12);
+			background: $green-gray;
+			border: 1px solid $green-gray;
+			border-radius: 10px;
+			text-align: center;
+			@include fz(18, 12);
+			color: $dark;
+		}
+	}
+}
