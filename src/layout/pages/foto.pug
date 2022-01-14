@@ -1,0 +1,68 @@
+extends ../layout.pug
+
+block head-inner
+	+title('Index page')
+	+desc('Index page description')
+
+	link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+
+block main
+	+breadcrumbs
+
+	section.foto
+		.container
+			.caption.caption_w1104
+				h1.caption__title Фотографии
+			.tabs
+				.tabs-list-wrap
+					ul.tabs-list
+						li.tabs-list-item
+							a.tabs__link.active(href="#" data-tab="oborudovanie") 
+								span Оборудование
+								span.tabs-num 10
+						li.tabs-list-item
+							a.tabs__link(href="#" data-tab="komnaty_priema") 
+								span Комнаты приема
+								span.tabs-num 8
+						li.tabs-list-item
+							a.tabs__link(href="#" data-tab="klienty") 
+								span Клиенты
+								span.tabs-num 8
+				.tabs__tab(data-tab="oborudovanie")
+					.items
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+					+btn-more
+				.tabs__tab(data-tab="komnaty_priema")
+					.items
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+					+btn-more
+				.tabs__tab(data-tab="klienty")
+					.items
+						a(href=img+"foto/img1.jpg" data-fancybox).item
+							img.item__img(src=img+"foto/img1.jpg", alt="")
+					+btn-more
+
+	+contact
+
+block body-bottom-inner
+	script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')

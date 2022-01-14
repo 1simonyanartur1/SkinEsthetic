@@ -2,6 +2,7 @@ import { ba } from "../blocks/ba/ba";
 import { contact } from "../blocks/contact/contact";
 import { equipment } from "../blocks/equipment/equipment";
 import { faq } from "../blocks/faq/faq";
+import { foto } from "../blocks/foto/foto";
 import { hamburger } from "../blocks/hamburger/hamburger";
 import { header } from "../blocks/header/header";
 import { reviews } from "../blocks/reviews/reviews";
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	reviews();
 	contact();
 	faq();
+	foto();
 });
 
 window.addEventListener('resize', function (e) {

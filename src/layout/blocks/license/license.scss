@@ -3,17 +3,17 @@
 
 	.inner {
 		display: grid;
-		grid-template-rows: 1fr;
+		grid-template-rows: none;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-gap: 20px;
 		
 		@include max-screen($tablet-middle) {
-			grid-template-rows: 1fr;
+			grid-template-rows: none;
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-gap: 10px;
 		}
 		@include max-screen($tablet-mini) {
-			grid-template-rows: 1fr;
+			grid-template-rows: none;
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 10px;
 		}
