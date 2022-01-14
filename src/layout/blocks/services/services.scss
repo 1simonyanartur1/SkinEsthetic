@@ -165,3 +165,18 @@
 		}
 	}
 }
+
+.service {
+	@include value('padding-top', 50, 20);
+
+	.text-container {
+
+		h1 {
+			@include fz(68, 28);
+			
+			@include max-screen($pc-medium) {
+				@include fz(50, 24);
+			}
+		}
+	}
+}
