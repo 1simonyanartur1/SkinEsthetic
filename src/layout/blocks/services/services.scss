@@ -39,22 +39,16 @@
 			@include value('padding-bottom', 60, 20);
 		}
 	}
-
-	.container {
-		max-width: 1550px;
-
-		@include max-screen($pc-medium) {
-			max-width: $container-mb;
-		}
-	}
 }
 
-.services-page {}
+.services-page {
+	@include value('padding-top', 50, 20);
+	@include value('padding-bottom', 100, 40);
+}
 
 .services {
 
 	.inner {
-		max-width: 1550px;
 		margin: 0 auto;
 		display: grid;
 		grid-gap: 3rem;
