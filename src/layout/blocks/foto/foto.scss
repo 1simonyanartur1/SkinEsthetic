@@ -1,127 +1,34 @@
 .foto {
 	@include value('padding-top', 25, 10);
 	
-	.tabs {
-		@include value('padding-top', 25, 10);
-		
-		&-list {
-			display: flex;
-			flex-wrap: nowrap;
-			min-width: 100%;
-			padding-bottom: 30px;
-			
-			&-wrap {
-				@include value('margin-bottom', 70, 25);
-				width: 100%;
-				overflow-x: auto;
-			}
-			
-			&-item {
-				@include value('margin-right', 54, 30);
-				position: relative;
-			}
-		}
+	.items {
+		display: grid;
+		grid-template-rows: none;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 20px;
 
-		&-num {
-			@include value('height', 46, 26);
-			@include value('width', 46, 26);
-			@include fz(18, 12);
-			font-weight: 700;
-			color: $white2;
-			border-radius: 50%;
-			background: $green;
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			transform: translate(50%, 50%);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		&__link {
-			display: block;
-			text-align: center;
-			@include value('padding-top', 22, 10);
-			@include value('padding-bottom', 22, 10);
-			@include value('padding-left', 49, 18);
-			@include value('padding-right', 49, 18);
-			color: $dark;
-			font-weight: 700;
-			@include fz(21, 15);
-			background: $beige;
-			border: 1px solid $gray;
-			text-decoration: none;
-			border-radius: 10px;
-			white-space: nowrap;
-
-			@media (any-hover) {
-				&:hover {
-					color: $white;
-					background: $dark;
-
-					.tabs-num {
-						color: $dark;
-						background: $gray;
-					}
-
-				}
-
-				&:active {
-					color: $white2;
-					background: $blue_dark;
-
-					.tabs-num {
-						color: $white2;
-						background: $dark;
-					}
-
-				}
-			}
-
-			&.active {
-				color: $white2;
-				background: $green;
-				border-color: $green;
-
-				.tabs-num {
-					display: none;
-				}
-			}
-		}
-
-		// &__tab {
-		// }
-
-		.items {
-			display: grid;
+		@include max-screen($tablet-middle) {
 			grid-template-rows: none;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			grid-gap: 20px;
-
-			@include max-screen($tablet-middle) {
-				grid-template-rows: none;
-				grid-template-columns: 1fr 1fr 1fr;
-				grid-gap: 10px;
-			}
-
-			@include max-screen($tablet-mini) {
-				grid-template-rows: none;
-				grid-template-columns: 1fr 1fr;
-				grid-gap: 10px;
-			}
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 10px;
 		}
 
-		.item {
-			&__img {
-				width: 100%;
-				height: 260px;
-				object-fit: cover;
-				border-radius: 10px;
+		@include max-screen($tablet-mini) {
+			grid-template-rows: none;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 10px;
+		}
+	}
 
-				@include max-screen($pc-medium) {
-					height: 200px;
-				}
+	.item {
+		&__img {
+			width: 100%;
+			height: 260px;
+			object-fit: cover;
+			border-radius: 10px;
+
+			@include max-screen($pc-medium) {
+				height: 200px;
 			}
 		}
 	}

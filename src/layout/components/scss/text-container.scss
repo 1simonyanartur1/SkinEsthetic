@@ -1,7 +1,7 @@
 .text-container {
 	color: $dark;
 	line-height: 1.2;
-
+       
 	h1,
 	h2,
 	h3,
@@ -54,15 +54,82 @@
 		@include fz(16, 14);
 		padding-left: 20px;
 		@include value('margin-bottom', 20, 10);
-
+		
 		&>li {}
 	}
-
+	
 	ul {
 		&>li {}
 	}
-
+	
 	ol {
 		&>li {}
+	}
+	
+	table {
+		display: block;
+		width: 100%;
+		overflow: auto;
+		@include fz(16, 14);
+		line-height: 1.2;
+		@include value('margin-bottom', 20, 10);
+		
+		td {
+			background: $header-scroll;
+		}
+	}
+	tbody {
+		display: block;
+		min-width: 1104px;
+	}
+	td {
+		@include value('padding-top', 22, 10);
+		@include value('padding-left', 49, 20);
+		@include value('padding-right', 49, 20);
+		@include value('padding-bottom', 22, 10);
+		
+		&:first-child {
+			width: 40%;
+		}
+		&:nth-child(2) {
+			width: 40%;
+		}
+		&:last-child {
+			width: 20%;
+		}
+	}
+	tr {
+		display: flex;
+
+		&:first-child {
+			td {
+				background: $body;
+			}
+		}
+		&:nth-child(2) {
+			td {
+				&:first-child {
+					border-radius: 10px 0 0 0;
+				}
+				&:last-child {
+					border-radius: 0 10px 0 0;
+				}
+			}
+		}
+		&:nth-child(even) {
+			td {
+				background: $green-gray;
+			}
+		}
+		&:last-child {
+			td {
+				&:first-child {
+					border-radius: 0 0 0 10px;
+				}
+				&:last-child {
+					border-radius: 0 0 10px 0;
+				}
+			}
+		}
 	}
 }

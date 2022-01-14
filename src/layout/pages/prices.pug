@@ -1,0 +1,132 @@
+extends ../layout.pug
+
+block head-inner
+	+title('Index page')
+	+desc('Index page description')
+
+	link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+
+block main
+	+breadcrumbs
+
+	section.prices
+		.container
+			.caption.caption_w1104
+				h1.caption__title Цены
+				p.caption__text Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения. С другой стороны, сложившаяся структура организации выявляет срочную потребность приоритизации разума над эмоциями.
+			.prices-header
+				h2.prices-header__title Какая услуга нужна?
+			.tabs
+				.tabs-list-wrap
+					ul.tabs-list
+						li.tabs-list-item
+							a.tabs__link.active(href="#" data-tab="chistka_lica") 
+								span Чистка лица 
+								span.tabs-num 10
+						li.tabs-list-item
+							a.tabs__link(href="#" data-tab="poverhnostnyj_piling") 
+								span Поверхностный пилинг 
+								span.tabs-num 8
+						li.tabs-list-item
+							a.tabs__link(href="#" data-tab="procedury_dlya_lica_i_tela") 
+								span Аппаратные процедуры для лица и тела
+								span.tabs-num 8
+						li.tabs-list-item
+							a.tabs__link(href="#" data-tab="massazh") 
+								span Массаж
+								span.tabs-num 8
+				.tabs__tab(data-tab="chistka_lica")
+					.text-container
+						table(cellpadding="0" cellspacing="0")
+							tbody
+								tr
+									td 
+										strong Название 
+									td 
+										strong Время процедуры
+									td 
+										strong Цена
+								tr
+									td
+										span Услуга 1
+									td
+										span 45 минут
+									td
+										span 3 400 ₽
+								tr
+									td
+										span А ещё сторонники тоталитаризма в науке набирают популярность среди определенных слоев населения, а значит, должны быть обнародованы.
+									td
+										span 120 минут
+									td
+										span 2 400 ₽
+								tr
+									td
+										span Услуга 3
+									td
+										span
+									td
+										span 5 300 ₽
+								tr
+									td
+										span А ещё сторонники тоталитаризма в науке набирают популярность среди
+									td
+										span 80 минут
+									td
+										span 5 100 ₽
+						p Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения. С другой стороны, сложившаяся структура организации выявляет срочную потребность приоритизации разума над эмоциями.
+						p Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения. С другой стороны, сложившаяся структура организации выявляет срочную потребность приоритизации разума над эмоциями. <br> Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения. С другой стороны, сложившаяся структура организации выявляет срочную потребность приоритизации разума над эмоциями. 
+				.tabs__tab(data-tab="poverhnostnyj_piling")
+					.text-container
+						table(cellpadding="0" cellspacing="0")
+							tbody
+								tr
+									td 
+										strong Название 
+									td 
+										strong Время процедуры
+									td 
+										strong Цена
+								tr
+									td
+										span Услуга 1
+									td
+										span 45 минут
+									td
+										span 3 400 ₽
+				.tabs__tab(data-tab="procedury_dlya_lica_i_tela")
+					.text-container
+						table(cellpadding="0" cellspacing="0")
+							tbody
+								tr
+									td 
+										strong Название 
+									td 
+										strong Время процедуры
+									td 
+										strong Цена
+								tr
+									td
+										span Услуга 1
+									td
+										span 45 минут
+									td
+										span 3 400 ₽
+								tr
+									td
+										span Услуга 1
+									td
+										span 45 минут
+									td
+										span 3 400 ₽
+				.tabs__tab(data-tab="massazh")
+					.text-container
+						p Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения. С другой стороны, сложившаяся структура организации выявляет срочную потребность приоритизации разума над эмоциями.
+
+	+ba
+	+reasons
+	+consult
+	+contact
+
+block body-bottom-inner
+	script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')

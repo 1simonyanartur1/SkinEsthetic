@@ -1,0 +1,19 @@
+.prices {
+	@include value('padding-top', 50, 20);
+
+	&-header {
+		@include value('margin-bottom', 36, 20);
+
+		&__title {
+			font-weight: 300;
+			@include fz(24,16);
+		}
+	}
+
+	.tabs {
+		.text-container {
+			max-width: 1104px;
+			width: 100%;
+		}
+	}
+}
