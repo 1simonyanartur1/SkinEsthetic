@@ -459,3 +459,9 @@ a {
 		}
 	}
 }
+
+.actions {
+	width: 100%;
+	@include value('margin-top', 40, 20);
+	text-align: center;
+}

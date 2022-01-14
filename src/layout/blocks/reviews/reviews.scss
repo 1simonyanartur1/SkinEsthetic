@@ -212,11 +212,6 @@
 			object-fit: cover;
 		}
 	}
-
-	.actions {
-		@include value('margin-top', 40, 20);
-		text-align: center;
-	}
 }
 
 .stars {
