@@ -17,6 +17,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	contact();
 	faq();
 
+	// Добавляем к каждой таблице в тексте и в табы
+	var tables = document.querySelectorAll('.text-container table');
+	var tabsLists = document.querySelectorAll('.tabs-list');
+
+	tables.forEach(table => {
+		table.classList.add('customScroll');
+	});
+	tabsLists.forEach(tabsList => {
+		tabsList.classList.add('customScroll');
+	});
+
 	const tabs = document.querySelector('.tabs');
 
 	if (tabs) {

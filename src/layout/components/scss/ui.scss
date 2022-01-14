@@ -457,6 +457,10 @@ a {
 			color: $dark;
 		}
 	}
+
+	.os-content {
+		display: flex;
+	}
 }
 
 .actions {
@@ -473,6 +477,10 @@ a {
 		flex-wrap: nowrap;
 		min-width: 100%;
 		padding-bottom: 30px;
+
+		.os-content {
+			display: flex;
+		}
 
 		&-wrap {
 			@include value('margin-bottom', 70, 25);
@@ -557,7 +565,6 @@ a {
 
 .customScroll {
 	height: 100%;
-	padding-right: 30px;
 }
 
 .os-theme-dark>.os-scrollbar,

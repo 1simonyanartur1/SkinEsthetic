@@ -13,8 +13,9 @@ export function header() {
 	}
 
 	var lastScrollTop = 0;
+	var st;
 	document.addEventListener('scroll', () => {
-		var st = window.pageYOffset || document.documentElement.scrollTop;
+		st = window.pageYOffset || document.documentElement.scrollTop;
 		if (st > lastScrollTop) {
 			// downscroll code
 			header.classList.add('scroll');
@@ -27,7 +28,6 @@ export function header() {
 		} else {
 			header.classList.add('scroll');
 		}
-
 
 		lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 	}, false);

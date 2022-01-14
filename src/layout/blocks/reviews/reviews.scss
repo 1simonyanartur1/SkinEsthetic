@@ -99,6 +99,7 @@
 		&__text {
 			line-height: 1.4;
 			@include fz(19, 14);
+			max-height: 200px;
 
 			@include max-screen($pc-medium) {
 				@include fz(17, 14);
