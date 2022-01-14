@@ -17,33 +17,46 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	contact();
 	faq();
 
-	var tabLink = document.querySelectorAll('.tabs__link');
-	var tabTab = document.querySelectorAll('.tabs__tab');
+	const tabs = document.querySelector('.tabs');
 
-	tabTab.forEach(function (tabTabItem) {
-		tabTabItem.style.display = 'none';
-	});
+	if (tabs) {
+		var tabLink = document.querySelectorAll('.tabs__link');
+		var tabTab = document.querySelectorAll('.tabs__tab');
 
-	tabTab[0].style.display = 'block';
+		tabTab.forEach(function (tabTabItem) {
+			tabTabItem.style.display = 'none';
+		});
 
-	tabLink.forEach(function (tabLinkItem) {
-		tabLinkItem.addEventListener('click', function (e) {
-			e.preventDefault();
-			let tabName = this.dataset.tab;
-			tabLink.forEach(function (tabLinkItem3) {
-				tabLinkItem3.classList.remove('active');
-			});
-			this.classList.add('active');
+		tabTab[0].style.display = 'block';
 
-			tabTab.forEach(function (tabTabItem) {
-				if (tabTabItem.getAttribute('data-tab') == tabName) {
-					tabTabItem.style.display = 'block';
-				} else {
-					tabTabItem.style.display = 'none';
-				}
+		tabLink.forEach(function (tabLinkItem) {
+			tabLinkItem.addEventListener('click', function (e) {
+				e.preventDefault();
+				let tabName = this.dataset.tab;
+				tabLink.forEach(function (tabLinkItem3) {
+					tabLinkItem3.classList.remove('active');
+				});
+				this.classList.add('active');
+
+				tabTab.forEach(function (tabTabItem) {
+					if (tabTabItem.getAttribute('data-tab') == tabName) {
+						tabTabItem.style.display = 'block';
+					} else {
+						tabTabItem.style.display = 'none';
+					}
+				});
 			});
 		});
-	});
+
+	} else {}
+
+	(function addPhoneMask() {
+		let telephone = document.querySelectorAll('input[type="tel"]');
+		let im = new Inputmask("+7 (999) 999-99-99");
+		im.mask(telephone);
+	}());
+
+	OverlayScrollbars(document.querySelectorAll('.customScroll'), {});
 });
 
 window.addEventListener('resize', function (e) {

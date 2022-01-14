@@ -4,7 +4,6 @@ block head-inner
 	+title('Index page')
 	+desc('Index page description')
 
-	link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
 
 block main
 	+breadcrumbs
@@ -16,16 +15,14 @@ block main
 				p.caption__text Постоянное информационно-пропагандистское обеспечение нашей деятельности предполагает независимые способы реализации анализа существующих паттернов поведения. С другой стороны, сложившаяся структура организации выявляет срочную потребность приоритизации разума над эмоциями. 
 			.inner
 				a.item(href=img+"license/img1.jpg" data-fancybox) 
-					img.item__img(src=img+"license/img1.jpg", alt="")
+					img.item__img(src=img+"license/img1.jpg", srcset=img+"license/webp/img1.webp" alt="")
 				a.item(href=img+"license/img1.jpg" data-fancybox)
-					img.item__img(src=img+"license/img1.jpg", alt="")
+					img.item__img(src=img+"license/img1.jpg", srcset=img+"license/webp/img1.webp" alt="")
 				a.item(href=img+"license/img1.jpg" data-fancybox)
-					img.item__img(src=img+"license/img1.jpg", alt="")
+					img.item__img(src=img+"license/img1.jpg", srcset=img+"license/webp/img1.webp" alt="")
 				a.item(href=img+"license/img1.jpg" data-fancybox)
-					img.item__img(src=img+"license/img1.jpg", alt="")
+					img.item__img(src=img+"license/img1.jpg", srcset=img+"license/webp/img1.webp" alt="")
 			+btn-more
 
 	+contact
 
-block body-bottom-inner
-	script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')

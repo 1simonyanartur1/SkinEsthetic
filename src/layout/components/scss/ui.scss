@@ -554,3 +554,39 @@ a {
 		}
 	}
 }
+
+.customScroll {
+	height: 100%;
+	padding-right: 30px;
+}
+
+.os-theme-dark>.os-scrollbar,
+.os-theme-light>.os-scrollbar {
+	padding: 0;
+}
+
+.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+	background: $white;
+}
+
+.os-theme-dark>.os-scrollbar-vertical .os-scrollbar-handle,
+.os-theme-light>.os-scrollbar-vertical .os-scrollbar-handle {
+	width: 4px;
+	border-radius: 4px;
+	left: -1px;
+	right: auto;
+	z-index: 2;
+}
+
+.os-theme-dark>.os-scrollbar-vertical,
+.os-theme-light>.os-scrollbar-vertical {
+	width: 2px;
+	background: $gray;
+	border-radius: 2px;
+	margin-right: 1px;
+}
+
+.os-host-resize-disabled.os-host-scrollbar-horizontal-hidden>.os-scrollbar-vertical {
+	top: 5px;
+	bottom: 5px;
+}

@@ -19,7 +19,12 @@ module.exports = function () {
 	
 	$.gulp.task('libs:js', async function () {
 		if ($.path.src.libsJS != '' || $.path.src.libsJS.length != 0) {
-			return null;
+			return $.gulp.src($.path.src.libsJS)
+				.pipe($.concat('libs.min.js'), {
+					allowEmpty: true
+				})
+				.pipe($.uglify())
+				.pipe($.gulp.dest($.path.build.libsJS))
 		} else {
 			return noData('libsJS');
 		}

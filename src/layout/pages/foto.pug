@@ -4,8 +4,6 @@ block head-inner
 	+title('Index page')
 	+desc('Index page description')
 
-	link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
-
 block main
 	+breadcrumbs
 
@@ -31,38 +29,36 @@ block main
 				.tabs__tab(data-tab="oborudovanie")
 					.items
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 					+btn-more
 				.tabs__tab(data-tab="komnaty_priema")
 					.items
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 					+btn-more
 				.tabs__tab(data-tab="klienty")
 					.items
 						a(href=img+"foto/img1.jpg" data-fancybox).item
-							img.item__img(src=img+"foto/img1.jpg", alt="")
+							img.item__img(src=img+"foto/img1.jpg", srcset=img+"foto/webp/img1.webp" alt="")
 					+btn-more
 
 	+contact
 
-block body-bottom-inner
-	script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')

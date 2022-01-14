@@ -35,8 +35,8 @@ global.$ = {
 			json: 'src/layout/blocks/**/*.json',
 			files: 'src/files/**/*',
 			robots: 'src/robots.txt',
-			libsCSS: [],
-			libsJS: [],
+			libsCSS: ['src/layout/components/libs/scrollbars/OverlayScrollbars.min.css'],
+			libsJS: ['src/layout/components/libs/Inputmask/inputmask.min.js', 'src/layout/components/libs/scrollbars/OverlayScrollbars.min.js'],
     },
     build: {
 			clean: 'build/',

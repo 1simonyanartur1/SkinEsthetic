@@ -24,6 +24,8 @@ export function header() {
 
 		if (st == 0) {
 			header.classList.remove('scroll');
+		} else {
+			header.classList.add('scroll');
 		}
 
 
