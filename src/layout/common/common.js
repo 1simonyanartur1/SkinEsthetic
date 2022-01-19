@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	ba();
 	team();
 	reviews();
-	contact();
 	faq();
 
 	// Добавляем к каждой таблице в тексте и в табы
@@ -82,5 +81,6 @@ window.addEventListener('resize', function (e) {
 }, true);
 
 window.onload = function() {
+	contact();
 };
 

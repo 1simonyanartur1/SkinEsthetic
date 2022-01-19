@@ -5,7 +5,9 @@ mixin contact
 				h2.caption__title Контакты
 				p.caption__text Постоянное информационно-пропагандистское обеспечение нашей деятельности
 		.row
-			#map.map(data-lat="59.939099" data-lng="30.315877")
+			.map-container.lozad(data-background-image-set="img/contact/bg.jpg")
+				button.btn.btn_dark.map__btn Загрузить карту
+				#map.map(data-lat="59.939099" data-lng="30.315877")
 			.inner
 				.block
 					h3.block__title Мы находимся по адресу
