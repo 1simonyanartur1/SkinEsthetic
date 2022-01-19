@@ -142,6 +142,7 @@ a {
 		@include fz(68, 24);
 		line-height: 1.1;
 		font-family: $second-font;
+		font-weight: bold;
 		
 		@include max-screen($pc-medium) {
 			@include fz(56, 24);

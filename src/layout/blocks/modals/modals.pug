@@ -1,7 +1,7 @@
 mixin modal-callback
 	.modal.micromodal-slide#modal-callback(aria-hidden='true')
 		.modal__overlay(tabindex='-1' data-micromodal-close)
-			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-callback')
 				button.modal__close(aria-label='Close modal' data-micromodal-close)
 					+close-icon
 				.modal-header
@@ -25,7 +25,7 @@ mixin modal-callback
 mixin modal-thanks
 	.modal.micromodal-slide#modal-thanks(aria-hidden='true')
 		.modal__overlay(tabindex='-1' data-micromodal-close)
-			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-thanks')
 				button.modal__close(aria-label='Close modal' data-micromodal-close)
 					+close-icon
 				.modal-header

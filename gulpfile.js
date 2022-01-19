@@ -1,5 +1,3 @@
-'use strict';
-
 global.$ = {
   browserSync: require('browser-sync').create(),
   del: require('del'),
@@ -23,7 +21,6 @@ global.$ = {
       html: 'src/layout/pages/*.pug',
       sass: 'src/layout/common/*.{scss,sass}',
       js: 'src/layout/common/*.js',
-      fonts: 'src/layout/components/fonts/**/*.*',
       svg: 'src/layout/common/img/icons/svg/*.svg',
 			img: [
 				'src/layout/components/sprite/svg/*.svg',
@@ -33,7 +30,7 @@ global.$ = {
 			],
 			video: 'src/layout/blocks/**/*.{mp4,ogv,webm}',
 			json: 'src/layout/blocks/**/*.json',
-			files: 'src/files/**/*',
+			files: ['src/files/**/*'],
 			robots: 'src/robots.txt',
 			libsCSS: ['src/layout/components/libs/scrollbars/OverlayScrollbars.min.css'],
 			libsJS: ['src/layout/components/libs/Inputmask/inputmask.min.js', 'src/layout/components/libs/scrollbars/OverlayScrollbars.min.js'],
@@ -45,19 +42,17 @@ global.$ = {
 			libsCSS: 'build/css/',
       js: 'build/js/',
 			libsJS: 'build/js/',
-      fonts: 'build/fonts/',
       svg: 'build/img/icons/',
       img: 'build/',
       video: 'build/',
 			json: 'build/',
-      files: 'build/files',
+      files: 'build/files/',
 			robots: 'build/',
     },
     watch: {
       html: 'src/layout/**/*.pug',
       sass: 'src/layout/**/*.{scss,sass}',
       js: 'src/layout/**/*.js',
-			fonts: 'src/layout/components/fonts/**/*.*',
 			svg: 'src/layout/common/img/icons/svg/*.svg',
 			img: [
 				'src/layout/components/sprite/svg/*.svg',
@@ -65,7 +60,7 @@ global.$ = {
 				'!src/layout/common/img/**/*',
 			],
 			video: 'src/layout/blocks/**/*.{mp4,ogv,webm}',
-			files: 'src/files/**/*',
+			files: ['src/files/**/*'],
 			robots: 'src/robots.txt',
 			json: 'src/layout/blocks/**/*.json',
     }
@@ -79,7 +74,6 @@ $.gulp.task('common',
 		'clean', 
 		$.gulp.parallel(
 			'html', 
-			'fonts', 
 			'svg',
 			'images',
 			'images:webp',
