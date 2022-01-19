@@ -4,6 +4,7 @@ import { equipment } from "../blocks/equipment/equipment";
 import { faq } from "../blocks/faq/faq";
 import { hamburger } from "../blocks/hamburger/hamburger";
 import { header } from "../blocks/header/header";
+import { modals } from "../blocks/modals/modals";
 import { reviews } from "../blocks/reviews/reviews";
 import { team } from "../blocks/team/team";
 
@@ -68,9 +69,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	}());
 
 	OverlayScrollbars(document.querySelectorAll('.customScroll'), {});
+
+	modals();
 });
 
 window.addEventListener('resize', function (e) {
 	header();
+
+	(function reinitSliders() {
+		console.log('2');
+	}());
 }, true);
 

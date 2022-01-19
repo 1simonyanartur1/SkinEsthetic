@@ -134,6 +134,7 @@
 			@include value('line-height', 70, 40);
 			@include value('padding-left', 20, 8);
 			@include value('padding-right', 20, 8);
+			@include fz(19, 14);
 			font-weight: 300;
 			color: $purple;
 			background: $white2;

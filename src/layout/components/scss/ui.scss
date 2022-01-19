@@ -192,6 +192,7 @@ a {
 	@include fz(21, 16);
 	text-decoration: none;
 	display: inline-block;
+	cursor: pointer;
 
 	&_white {
 		background: $white2;

@@ -1,0 +1,36 @@
+mixin modal-callback
+	.modal.micromodal-slide#modal-callback(aria-hidden='true')
+		.modal__overlay(tabindex='-1' data-micromodal-close)
+			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+				button.modal__close(aria-label='Close modal' data-micromodal-close)
+					+close-icon
+				.modal-header
+					h3.modal__title Есть вопрос?
+					h3.modal__subtitle Мы бесплатно проконсультируем вас по любым вопросам.
+				form.form(action="#")
+					fieldset.form-block
+						label.form__label Номер телефона
+							span Обязательно для заполнения!
+						input.form__input(type="tel" placeholder="+7 (___) ___  __ __")
+					fieldset.form-block
+						label.form__label Текст сообщения
+							span Обязательно для заполнения!
+						textarea.form__textarea(placeholder="Введите сюда текст вашего вопроса....")
+					fieldset.form-block
+						button.form__btn Отправить заявку
+					fieldset.form-block.form-block_large
+						p.form__info Согласен (-на) с <a href="privacy.html">политикой конфиденциальности</a> и даю <br> свое согласие на <a href="personal.html">обработку персональных данных</a>
+
+
+mixin modal-thanks
+	.modal.micromodal-slide#modal-thanks(aria-hidden='true')
+		.modal__overlay(tabindex='-1' data-micromodal-close)
+			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+				button.modal__close(aria-label='Close modal' data-micromodal-close)
+					+close-icon
+				.modal-header
+					h3.modal__title Успешно <br> отправлено
+					h3.modal__subtitle Примерное время ответа составит 5-9 минут!
+
+
+

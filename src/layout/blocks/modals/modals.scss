@@ -1,0 +1,295 @@
+.modal {
+	line-height: 1.2;
+
+	&__close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translate(125%, 0);
+		width: 50px;
+		height: 50px;
+		background: $dark2;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: .3s;
+		cursor: pointer;
+		
+		@include max-screen($tablet-mini) {
+			transform: translate(0, -125%);
+		}
+
+		@media (any-hover) {
+			&:hover {
+				background: $green;
+			}
+		}
+
+		svg {
+			display: block;
+			width: 22px;
+		}
+	}
+
+	&-header {
+		@include value('margin-bottom', 50, 15);
+		color: $white2;
+	}
+	
+	.modal__title {
+		font-weight: 700;
+		@include fz(68, 24);
+		font-family: $second-font;
+		line-height: 1;
+	}
+	
+	.modal__subtitle {
+		@include value('margin-top', 25, 10);
+		@include fz(17, 14);
+		font-weight: 300;
+	}
+	
+	&__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 17, 38, 0.87);
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		z-index: 99;
+		overflow-y: auto;
+		padding: 15px 0;
+
+		@include max-screen($tablet-mini) {
+			padding: 80px 10px 15px;
+		}
+	}
+
+	&__container {
+		max-width: 600px;
+		width: 100%;
+		border-radius: 10px;
+		background: $dark2;
+		@include value('padding', 45, 10);
+	}
+
+	.form {
+
+		&-block {
+			width: 100%;
+			@include value('margin-bottom', 22, 10);
+
+			&.error {
+				.form__label span {
+					display: block;
+				}
+				.form__input,
+				.form__textarea {
+					border-color: $red;
+				}
+			}
+		}
+		
+		&__label {
+			font-weight: 500;
+			@include fz(17, 14);
+			@include value('margin-bottom', 16, 8);
+			width: 100%;
+			color: $white2;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			flex-wrap: wrap;
+			
+			span {
+				display: none;
+				color: $red;
+				@include fz(17, 12);
+			}
+		}
+
+		&__input {
+			display: block;
+			width: 100%;
+			@include value('height', 70, 40);
+			@include value('line-height', 70, 40);
+			@include value('padding-left', 20, 8);
+			@include value('padding-right', 20, 8);
+			font-weight: 300;
+			color: $purple;
+			background: $white2;
+			border: 1px solid transparent;
+			border-radius: 10px;
+			@include fz(19, 14);
+
+			&:focus {
+				border-color: $green;
+			}
+
+			&::placeholder {
+				color: $gray_dark;
+				font: inherit;
+				font-size: inherit;
+			}
+		}
+
+		&__textarea {
+			resize: none;
+			display: block;
+			width: 100%;
+			height: 270px;
+			@include value('line-height', 70, 40);
+			@include value('padding-left', 20, 8);
+			@include value('padding-right', 20, 8);
+			font-weight: 300;
+			color: $purple;
+			background: $white2;
+			border: 1px solid transparent;
+			border-radius: 10px;
+			@include fz(19, 14);
+
+			&:focus {
+				border-color: $green;
+			}
+
+			&::placeholder {
+				color: $gray_dark;
+				font: inherit;
+				font-size: inherit;
+			}
+		}
+
+		&__btn {
+			@include value('height', 70, 40);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $green;
+			border-radius: 5px;
+			text-align: center;
+			color: $white2;
+			font-weight: 800;
+			@include fz(21, 14);
+			width: 100%;
+			transition: .3s;
+			cursor: pointer;
+
+			@include max-screen($tablet-middle) {
+				width: 100%;
+			}
+
+			@media (any-hover) {
+				&:hover {
+					background: $dark;
+				}
+
+				&:active {
+					background: $blue_dark;
+				}
+			}
+		}
+
+		&__info {
+			color: $white2;
+			line-height: 1.2;
+			line-height: 1.6;
+			text-align: center;
+
+			@include max-screen($tablet-middle) {
+				padding: 0;
+				text-align: center;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+				border-bottom: 1px solid $white2;
+			}
+		}
+	}
+
+	&#modal-thanks {
+		.modal__container {
+			text-align: center;
+		}
+	}
+}
+
+
+
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes mmfadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes mmslideIn {
+	from {
+		transform: translateY(15%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes mmslideOut {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(-10%);
+	}
+}
+
+.micromodal-slide {
+	display: none;
+}
+
+.micromodal-slide.is-open {
+	display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+	animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+	animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+	animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+	animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+	will-change: transform;
+}
