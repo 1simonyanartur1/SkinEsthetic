@@ -8,8 +8,9 @@ import { modals } from "../blocks/modals/modals";
 import { reviews } from "../blocks/reviews/reviews";
 import { team } from "../blocks/team/team";
 
+header();
+
 document.addEventListener("DOMContentLoaded", function (event) {
-	header();
 	hamburger();
 	equipment();
 	ba();
@@ -74,10 +75,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 window.addEventListener('resize', function (e) {
-	header();
-
-	(function reinitSliders() {
-		console.log('2');
-	}());
 }, true);
 

@@ -8,6 +8,8 @@ export function team() {
 		var swiper = new Swiper(sliderNavEl, {
 			watchSlidesProgress: true,
 			allowTouchMove: false,
+			initialSlide: 1,
+			// loop: true,
 			breakpoints: {
 				320: {
 					spaceBetween: 40,
@@ -35,6 +37,11 @@ export function team() {
 				nextEl: ".team .arrow_next",
 				prevEl: ".team .arrow_prev",
 			},
+			// on: {
+			// 	slideChange: function () {
+			// 		swiper.slideNext(300, true);
+			// 	},
+			// },
 		});
 	} else {}
 

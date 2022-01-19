@@ -21,6 +21,24 @@
 		@include value('padding', 25, 10);
 		background: $header-scroll;
 		line-height: 1.2;
+		border-radius: 10px;
+
+		&_ghost {
+			border: 5px dashed #D8F5F5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.item__title {
+				text-align: center;
+				@include fz(19, 12);
+				color: #537E7E;
+				line-height: 1.4;
+				margin: 0;
+				padding: 0;
+				max-width: 417px;
+			}
+		}
 
 		&__img {
 			width: 47%;
