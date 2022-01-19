@@ -11,6 +11,10 @@ import { team } from "../blocks/team/team";
 header();
 
 document.addEventListener("DOMContentLoaded", function (event) {
+	const el = document.querySelectorAll(".lozad");
+	const observer = lozad(el);
+	observer.observe();
+
 	hamburger();
 	equipment();
 	ba();
@@ -76,4 +80,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 window.addEventListener('resize', function (e) {
 }, true);
+
+window.onload = function() {
+};
 
