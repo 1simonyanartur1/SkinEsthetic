@@ -14,7 +14,7 @@ module.exports = function() {
       .pipe($.cache($.webp()))
       .pipe($.rename(function (path) {
         var pathDir = path.dirname.replace('img', '').replace('blocks', '');
-        path.dirname = "/img/" + pathDir + "/webp/";
+        path.dirname = "/img/" + pathDir;
       }))
       .pipe($.gulp.dest($.path.build.img))
   });
