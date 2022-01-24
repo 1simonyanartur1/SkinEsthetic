@@ -40,6 +40,10 @@
 			@include fz(19, 14);
 			color: $dark;
 			text-decoration: none;
+
+			&.active {
+				color: $green;
+			}
 			
 			@include max-screen($pc-medium) {
 				@include fz(15, 14);
