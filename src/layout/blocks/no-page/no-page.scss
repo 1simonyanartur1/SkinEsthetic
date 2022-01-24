@@ -1,0 +1,88 @@
+.no-page {
+
+	@include value('padding-top', 50, 25);
+	@include value('padding-bottom', 50, 25);
+
+	.container {
+		position: relative;
+		@include value('min-height', 650, 250);
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 33%;
+		object-fit: contain;
+
+		@include max-screen($tablet-large) {
+			right: 10px;
+		}
+		@include max-screen($mobile-large) {
+			display: none;
+		}
+		@include max-screen($mobile-landscape-height) {
+			display: none;
+		}
+	}
+
+	.inner {
+		width: 65%;
+
+		@include max-screen($mobile-large) {
+			width: 100%;
+		}
+
+		@include max-screen($mobile-landscape-height) {
+			width: 100%;
+		}
+	}
+
+	.caption {
+		@include max-screen($mobile-large) {
+			text-align: center;
+		}
+
+		@include max-screen($mobile-landscape-height) {
+			text-align: center;
+		}
+	}
+
+	.action {
+		&-item {
+			display: inline-block;
+
+			@include max-screen($tablet-large) {
+				width: 100%;
+
+				a {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.to-services-link {
+	text-decoration: none;
+	font-weight: 300;
+	color: $dark;
+	@include fz(21, 16);
+
+	@media (any-hover) {
+		&:hover {
+			color: $green;
+			span {
+				border-color: $green;
+			}
+		}
+	}
+	
+	span {
+		border-bottom: 1px solid $dark;
+	}
+}

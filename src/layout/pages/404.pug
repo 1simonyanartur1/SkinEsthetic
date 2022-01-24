@@ -1,0 +1,29 @@
+//- главная
+extends ../layout.pug
+
+block head-inner
+	+title('Index page')
+	+desc('Index page description')
+
+	link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+
+block main
+	
+	+breadcrumbs
+
+	section.no-page
+		.container
+			.inner
+				.caption.caption_left
+					h1.caption__title Страница не найдена...
+					p.caption__text Вероятнее всего вы <b>ошиблись в адресной строке</b>, либо такой страницы не существует.
+				ul.action
+					li.action-item
+						a.btn.btn_green(href="/") Вернуться на главную
+					li.action-item
+						a.btn.to-services-link(href="services.html") 
+							span На страницу услуг
+			img.no-page__img(src=img+"no-page-img.png", alt="")
+
+block body-bottom-inner
+	script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')

@@ -200,6 +200,10 @@
 
 	.text-container {
 
+		// img {
+		// 	height: 450px;
+		// }
+
 		h1 {
 			@include fz(68, 28);
 			
@@ -207,5 +211,13 @@
 				@include fz(50, 24);
 			}
 		}
+
+		// table {
+		// 	&:before {
+		// 		content: '';
+		// 		display: block;
+		// 		clear: both;
+		// 	}
+		// }
 	}
 }

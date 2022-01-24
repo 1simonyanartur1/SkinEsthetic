@@ -23,12 +23,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	faq();
 
 	// Добавляем к каждой таблице в тексте и в табы
-	var tables = document.querySelectorAll('.text-container table');
 	var tabsLists = document.querySelectorAll('.tabs-list');
 
-	tables.forEach(table => {
-		table.classList.add('customScroll');
-	});
 	tabsLists.forEach(tabsList => {
 		tabsList.classList.add('customScroll');
 	});
@@ -44,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		});
 
 		tabTab[0].style.display = 'block';
+
+		tabLink[0].classList.add('active');
 
 		tabLink.forEach(function (tabLinkItem) {
 			tabLinkItem.addEventListener('click', function (e) {

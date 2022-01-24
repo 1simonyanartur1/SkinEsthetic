@@ -158,6 +158,12 @@ a {
 		span {
 			font-weight: 500;
 		}
+
+		b,
+		strong {
+			color: $green;
+			font-weight: 700;
+		}
 	}
 }
 
@@ -387,6 +393,22 @@ a {
 				min-width: 220px;
 			}
 
+			&:not(:last-child) {
+				.list__link {
+					@media (any-hover) {
+						&:hover {
+							background: transparent;
+							color: $green;
+						}
+
+						&:active {
+							color: $white2;
+							background: $blue_dark;
+							border-color: $blue_dark;
+						}
+					}
+				}
+			}
 			&:first-child {
 				min-width: 160px;
 				max-width: none;
@@ -414,26 +436,11 @@ a {
 
 						&:active {
 							color: $blue_dark;
+							background: transparent;
 							
 							svg path {
 								fill: $blue_dark;
 							}
-						}
-					}
-				}
-			}
-			&:not(:first-child) {
-				.list__link {
-					@media (any-hover) {
-						&:hover {
-							background: transparent;
-							color: $green;
-						}
-						
-						&:active {
-							color: $white2;
-							background: $blue_dark;
-							border-color: $blue_dark;
 						}
 					}
 				}
@@ -575,7 +582,8 @@ a {
 }
 
 .os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
-	background: $white;
+	background: $dark;
+	height: 2px;
 }
 
 .os-theme-dark>.os-scrollbar-vertical .os-scrollbar-handle,

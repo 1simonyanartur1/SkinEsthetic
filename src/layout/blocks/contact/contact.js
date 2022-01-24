@@ -2,20 +2,26 @@ export function contact() {
 	
 	setTimeout(function () {
 		var elem = document.createElement('script');
-		elem.type = 'text/javascript';
-		elem.src = "https://api-maps.yandex.ru/2.1/?apikey=6184eb16-4f7f-477d-bb93-452c4404b653&lang=ru_RU&load=package.standard&lang=ru_RU&onload=init";
+		elem.src = "https://api-maps.yandex.ru/2.1/?apikey=6184eb16-4f7f-477d-bb93-452c4404b653&lang=ru_RU&load=package.standard&lang=ru_RU";
 		document.body.appendChild(elem);
 	}, 3000);
 
 	const siteMap = document.querySelector('#map');
-	const lat = parseFloat(siteMap.dataset.lat);
-	const lng = parseFloat(siteMap.dataset.lng);
-	const mapLoad = document.querySelector('.map__btn');;
+	var mapLoad;
+	var lat;
+	var lng;
 
-	mapLoad.addEventListener('click', function (e) {
-		ymaps.ready(init);
-		this.style.display = 'none';
-	});
+	if (siteMap) {
+		lat = parseFloat(siteMap.dataset.lat);
+		lng = parseFloat(siteMap.dataset.lng);
+		mapLoad = document.querySelector('.map__btn');
+		
+		mapLoad.addEventListener('click', function (e) {
+			ymaps.ready(init);
+			this.style.display = 'none';
+		});
+	} else {}
+
 
 	function init() {
 		var myMap = new ymaps.Map("map", {
