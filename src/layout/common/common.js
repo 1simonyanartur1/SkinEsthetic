@@ -32,35 +32,54 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	const tabs = document.querySelector('.tabs');
 
 	if (tabs) {
-		var tabLink = document.querySelectorAll('.tabs__link');
-		var tabTab = document.querySelectorAll('.tabs__tab');
+		var tabsLink = document.querySelectorAll('.tabs__link');
+		var tabsTab = document.querySelectorAll('.tabs__tab');
 
-		tabTab.forEach(function (tabTabItem) {
-			tabTabItem.style.display = 'none';
+		tabsTab.forEach(function (tabsTabItem) {
+			tabsTabItem.style.display = 'none';
 		});
 
-		tabTab[0].style.display = 'block';
+		tabsTab[0].style.display = 'block';
 
-		tabLink[0].classList.add('active');
+		tabsLink[0].classList.add('active');
 
-		tabLink.forEach(function (tabLinkItem) {
-			tabLinkItem.addEventListener('click', function (e) {
+		tabsLink.forEach(function (tabsLinkItem) {
+			tabsLinkItem.addEventListener('click', function (e) {
 				e.preventDefault();
 				let tabName = this.dataset.tab;
-				tabLink.forEach(function (tabLinkItem3) {
-					tabLinkItem3.classList.remove('active');
+				tabsLink.forEach(function (tabsLinkItem3) {
+					tabsLinkItem3.classList.remove('active');
 				});
 				this.classList.add('active');
 
-				tabTab.forEach(function (tabTabItem) {
-					if (tabTabItem.getAttribute('data-tab') == tabName) {
-						tabTabItem.style.display = 'block';
+				tabsTab.forEach(function (tabsTabItem) {
+					if (tabsTabItem.getAttribute('data-tab') == tabName) {
+						tabsTabItem.style.display = 'block';
 					} else {
-						tabTabItem.style.display = 'none';
+						tabsTabItem.style.display = 'none';
 					}
 				});
 			});
 		});
+
+		// количество фотографий в табе
+		const fotoSection = document.querySelector('.foto');
+		if (fotoSection) {
+			tabsTab.forEach(tab => {
+				let name = tab.dataset.tab;
+				let fotos = tab.querySelectorAll('.item__img');
+				let count = fotos.length;
+
+				tabsLink.forEach(link => {
+					let num = link.querySelector('.tabs-num');
+
+					if (link.dataset.tab == name) {
+						num.innerHTML = count;
+					} else {}
+
+				});
+			});
+		}
 
 	} else {}
 
@@ -74,9 +93,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	modals();
 });
-
-window.addEventListener('resize', function (e) {
-}, true);
 
 window.onload = function() {
 	contact();

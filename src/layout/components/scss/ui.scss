@@ -607,3 +607,36 @@ a {
 	top: 5px;
 	bottom: 5px;
 }
+
+.form {
+	&-block {
+		position: relative;
+		
+		span {
+			position: absolute;
+			line-height: 1;
+			color: $red;
+			font-size: 14px;
+			right: 0;
+			top: 0;
+			display: none;
+			transform: translate(0, -150%);
+		}
+	}
+
+	&__input {
+		&.error {
+			&~span {
+				display: block;
+
+				@include max-screen($mobile-large) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.site-section {
+	padding: 25px 0;
+}

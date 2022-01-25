@@ -6,6 +6,10 @@
 
 	.container {
 		min-height: 411px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&-thanks {

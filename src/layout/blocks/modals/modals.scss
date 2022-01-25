@@ -83,14 +83,14 @@
 			width: 100%;
 			@include value('margin-bottom', 22, 10);
 
-			&.error {
-				.form__label span {
-					display: block;
-				}
-				.form__input,
-				.form__textarea {
-					border-color: $red;
-				}
+			span {
+				position: absolute;
+				line-height: 1;
+				color: $red;
+				font-size: 14px;
+				right: 0;
+				top: 10px;
+				transform: translate(0, 0);
 			}
 		}
 		

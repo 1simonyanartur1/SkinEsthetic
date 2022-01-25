@@ -217,7 +217,7 @@
 		@include value('padding-left', 100, 30);
 		@include value('padding-top', 26, 15);
 		@include value('padding-bottom', 26, 15);
-		max-width: 545px;
+		max-width: 645px;
 		
 		@include max-screen($mobile-large) {
 			padding-left: 0;

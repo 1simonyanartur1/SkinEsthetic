@@ -12,14 +12,15 @@ mixin mainscreen
 						h2.record-thanks__title <span>Успешно</span> отправлено!
 						p.record-thanks__text Спасибо за запись, наш менеджер свяжется с вами для подтверждения заявки на запись.
 					.record__text Для записи на прием оставьте свой номер телефона
-					form.record-form(action="#") 
-						fieldset.record-form-block
+					form.record-form.form(action="#") 
+						fieldset.form-block.record-form-block
 							label.record-form__label
 								+user-card-icon
-							input.record-form__input(type="tel" placeholder="+7 (___) ___  __ __")
-						fieldset.record-form-block
+							input.form__input.record-form__input(type="tel" placeholder="+7 (___) ___  __ __")
+							span Обязательно для заполнения!
+						fieldset.form-block.record-form-block
 							button.record-form__btn Записаться на прием
-						fieldset.record-form-block.record-form-block_large
+						fieldset.form-block.record-form-block.record-form-block_large
 							p.record-form__info Согласен (-на) с <a href="privacy.html">политикой конфиденциальности</a> и даю свое согласие на обработку персональных данных
 				.cards
 					.card

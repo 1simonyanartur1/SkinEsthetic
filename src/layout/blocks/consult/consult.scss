@@ -118,6 +118,17 @@
 
 		&-block {
 			@include value('margin-top', 30, 15);
+			position: relative;
+
+			span {
+				position: absolute;
+				line-height: 1;
+				color: $red;
+				font-size: 14px;
+				right: 0;
+				top: 0;
+				transform: translate(0, 0);
+			}
 		}
 
 		&__label {
