@@ -6,6 +6,11 @@ mixin mainscreen
 				p.mainscreen__text Омоложение и оздоровление вашей кожи!
 				img.lozad.mainscreen__img(data-src=img+"mainscreen/img.png", alt="")
 				.record
+					.record-thanks
+						.record-thanks__icon
+							+check-icon
+						h2.record-thanks__title <span>Успешно</span> отправлено!
+						p.record-thanks__text Спасибо за запись, наш менеджер свяжется с вами для подтверждения заявки на запись.
 					.record__text Для записи на прием оставьте свой номер телефона
 					form.record-form(action="#") 
 						fieldset.record-form-block

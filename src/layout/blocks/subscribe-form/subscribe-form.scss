@@ -4,6 +4,14 @@
 	@include value('padding-top', 60, 20);
 	@include value('padding-bottom', 60, 20);
 
+	.container {
+		min-height: 411px;
+	}
+
+	&-thanks {
+		display: none;
+	}
+
 	.form {
 		color: $white2;
 		max-width: 1085px;
